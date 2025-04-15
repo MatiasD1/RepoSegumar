@@ -13,7 +13,7 @@ import { Contact } from "./components/contact";
 
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
-import { Page2 } from "./pages/page2";
+//import { Page2 } from "./pages/page2";
 
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -39,14 +39,14 @@ const App = () => {
               <Features data={landingPageData.Features} />
               <About data={landingPageData.About} />
               <Services data={landingPageData.Services} />
-              <Gallery data={landingPageData.Gallery} />
+              {/*<Gallery data={landingPageData.Gallery} />*/}
               <Testimonials data={landingPageData.Testimonials} />
-              <Team data={landingPageData.Team} />
+              {/*<Team data={landingPageData.Team} />*/}
               <Contact data={landingPageData.Contact} />
             </>
           }
         />
-        <Route path="/page2" element={<Page2 data={landingPageData.About}/>} />
+       {/*  <Route path="/page2" element={<Page2 data={landingPageData.About}/>} />*/}
       </Routes>
     </Router>
   );

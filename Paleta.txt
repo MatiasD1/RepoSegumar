@@ -1,0 +1,18 @@
+Elemento		Color sugerido
+Logo y branding		Rojo y blanco
+Botón principal		Rojo con texto blanco
+Fondo general		Blanco
+Texto principal		Negro
+Footer			Azul con texto blanco
+Hover de botón		Rojo más oscuro o Verde
+Iconos decorativos	Verde
+Enlaces destacados	Azul o Rojo
+
+Primaria: Gotham Pro (Párrafos)
+Secundaria: Swiss 721 (Titulos)
+Terciaria: AvantGarde (Decoraciones, quotes)
+
+- Madera de roble oscuro para  escotillas en la puerta y techo de la torre
+- Ramita del desierto y arcilla para las masetas de la puerta
+- Atriles para la varanda del techo de la entrada
+- 4 Fogatas para chimenea

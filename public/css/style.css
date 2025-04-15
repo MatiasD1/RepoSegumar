@@ -31,12 +31,11 @@ h4 {
   font-weight: 600;
 }
 h5 {
-  text-transform: uppercase;
   font-weight: 700;
   line-height: 20px;
 }
 p {
-  font-size: 15px;
+  font-size: 20px;
 }
 p.intro {
   margin: 12px 0 0;
@@ -92,7 +91,7 @@ hr {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0;
@@ -221,7 +220,7 @@ a:focus,
 .intro h1 {
   font-family: "Swiss 721", sans-serif;
   color: #fff;
-  font-size: 82px;
+  font-size: 60px;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
@@ -266,7 +265,7 @@ header .intro-text {
 }
 #about h3 {
   font-size: 22px;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 }
 #about h2 {
   position: relative;
@@ -297,16 +296,55 @@ header .intro-text {
   padding-right: 8px;
 }
 #about img {
-  width: 520px;
-  margin-top: 10px;
-  background: #fff;
+  width: auto;
   border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
 }
 #about p {
-  line-height: 24px;
+  line-height: 20px;
   margin: 30px 0;
 }
+#about .mb-5 {
+  margin-bottom: 3rem;
+}
+#about .about-text {
+  padding: 0px 20px;
+}
+#about .reverse-custom {
+  flex-direction: row-reverse;
+  display: flex;
+}
+#about .reason-item {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+#about .reason-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#about .reason-item p {
+  font-size: 14px;
+  color: #666;
+}
+.check-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reason-item {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+
+}
+
 /* Services Section */
 #services {
   padding: 100px 0;

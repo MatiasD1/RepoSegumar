@@ -48,34 +48,34 @@ export const Navigation = () => {
          <ul className="nav navbar-nav navbar-right">
           <li>
             <a href="#features" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("features"); }}>
-              Features
+              Quienes somos
             </a>
           </li>
           <li>
             <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("about"); }}>
-              About
+              Seguridad Física
             </a>
           </li>
           <li>
             <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("services"); }}>
-              Services
+              Seguridad Electrónica
             </a>
           </li>
-          <li>
+       {/*   <li>
             <a href="#portfolio" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("portfolio"); }}>
               Gallery
             </a>
-          </li>
+          </li>*/}
           <li>
             <a href="#testimonials" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("testimonials"); }}>
-              Testimonials
+              Nuestros Clientes
             </a>
           </li>
-          <li>
+        {/*  <li>
             <a href="#team" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("team"); }}>
               Team
             </a>
-          </li>
+          </li>*/}
          {/* <li>
             <Link className="page-scroll" to="/page2">
               Page2
@@ -83,7 +83,7 @@ export const Navigation = () => {
           </li>*/}
           <li>
             <a href="#contact" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("contact"); }}>
-              Contact
+              Contacto
             </a>
           </li>
         </ul>

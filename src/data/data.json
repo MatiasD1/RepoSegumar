@@ -1,22 +1,12 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Tu seguridad es nuestro compromiso",
+    "paragraph": "Experiencia y tecnología."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
-    ],
-    "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
-    ]
+    "paragraph": "Segumar es una empresa de seguridad con base en la ciudad de Mar del Plata, conformada por un equipo altamente capacitado y respaldado por más de 30 años de experiencia en el sector. Nacimos con el objetivo de satisfacer de manera eficiente las necesidades de protección y resguardo de las personas y sus bienes. Nuestra misión es brindar un servicio confiable, ético y personalizado, enfocado en garantizar la tranquilidad de nuestros clientes en todo momento.",
+    "paragraph2": "Nuestro equipo está compuesto por personal idóneo y calificado, seleccionado a través de un riguroso proceso que garantiza profesionalismo, responsabilidad y compromiso. Todos nuestros integrantes cumplen con los requisitos establecidos por los organismos de control y participan periódicamente en instancias de actualización y perfeccionamiento. Esta búsqueda constante de la excelencia nos permite ofrecer soluciones integrales y adaptadas a cada contexto, combinando experiencia, tecnología y una fuerte vocación de servicio.",
+    "img": "img/accept.png"
   },
   "Gallery": [
     {
