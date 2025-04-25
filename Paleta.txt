@@ -1,3 +1,9 @@
+PALETA
+
+Rojo: #ff0116
+Verde: #C3FF26
+Azul: #0A057D
+
 Elemento		Color sugerido
 Logo y branding		Rojo y blanco
 Botón principal		Rojo con texto blanco
@@ -12,7 +18,50 @@ Primaria: Gotham Pro (Párrafos)
 Secundaria: Swiss 721 (Titulos)
 Terciaria: AvantGarde (Decoraciones, quotes)
 
-- Madera de roble oscuro para  escotillas en la puerta y techo de la torre
-- Ramita del desierto y arcilla para las masetas de la puerta
-- Atriles para la varanda del techo de la entrada
-- 4 Fogatas para chimenea
+Premisas claves son: respaldo, compromiso, tecnología
+priorizando la seguridad y la satisfacción de nuestros clientes.
+
+Nuestra misión es proporcionar servicios de seguridad
+de alta calidad, personalizados y confiables a nuestros
+clientes, protegiendo sus activos, personas y propiedades.
+Nos comprometemos a ser proactivos, innovadores y
+éticos en todo lo que hacemos, siempre priorizando la
+seguridad y la satisfacción de nuestros clientes."
+Nuestra visión es ser la empresa de seguridad líder en la
+región, reconocida por nuestra excelencia en la prestación
+de servicios de seguridad, nuestra innovación en la
+tecnología de seguridad y nuestro compromiso con la
+comunidad. Queremos ser los socios de confianza de
+nuestros clientes, ayudándolos a proteger lo que más
+importa.
+Nuestros valores son el compromiso con la seguridad y la
+satisfacción del cliente - Innovación y mejora continua -
+Ética y integridad en todos nuestros actos - Respeto y
+aprecio por nuestros empleados y clientes - Compromiso
+con la comunidad y el medio ambiente
+
+FRASES
+
+Protegemos lo que más importa. 
+Experiencia y tecnología en seguridad, a tu servicio. 
+Tu tranquilidad es nuestra prioridad. 
+Confiá en los que saben cuidarte.
+La seguridad de una protección integral. 
+
+PDF
+
+#5: Logo en objetos
+#7: Logo en lugares 
+#10: Manual de marca: logo, tipografía, paleta, misión-visión-valores, vehículos, fotos de portada
+#11: Textos para componentes, certificados, "Confían en nosotros"
+
+CONSULTAS
+
+#SERVICIOS FISICOS
+Pasos para concretar el servicio va?
+
+photopea.com
+
+Gotham Pro - 100 px - 150 px - Regular - Medium 
+
+En vez del margin-top: 80px; en #header, hacer que el navbar no se ponga encima del header

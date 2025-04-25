@@ -1,7 +1,7 @@
 {
   "Header": {
     "title": "Tu seguridad es nuestro compromiso",
-    "paragraph": "Experiencia y tecnología."
+    "paragraph": "BIENVENIDO A LA EXPERIENCIA SEGUMAR"
   },
   "About": {
     "paragraph": "Segumar es una empresa de seguridad con base en la ciudad de Mar del Plata, conformada por un equipo altamente capacitado y respaldado por más de 30 años de experiencia en el sector. Nacimos con el objetivo de satisfacer de manera eficiente las necesidades de protección y resguardo de las personas y sus bienes. Nuestra misión es brindar un servicio confiable, ético y personalizado, enfocado en garantizar la tranquilidad de nuestros clientes en todo momento.",
@@ -57,35 +57,26 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Nombre del Servicio",
+      "text": "Descripción breve del servicio.",
+      "image": "url-o-ruta-de-la-imagen.jpg"
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Nombre del Servicio",
+      "text": "Descripción breve del servicio.",
+      "image": "url-o-ruta-de-la-imagen.jpg"
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Nombre del Servicio",
+      "text": "Descripción breve del servicio.",
+      "image": "url-o-ruta-de-la-imagen.jpg"
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "Nombre del Servicio",
+      "text": "Descripción breve del servicio.",
+      "image": "url-o-ruta-de-la-imagen.jpg"
     }
+    
   ],
   "Testimonials": [
     {

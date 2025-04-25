@@ -42,7 +42,7 @@ export const Contact = (props) => {
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">
-                <h2>Contacto</h2>
+                <h2>Contáctenos</h2>
                 <p>
                   Por favor complete el siguiente formulario para enviarnos un email y nos comunicaremos con usted lo antes posible.
                 </p>
@@ -92,14 +92,14 @@ export const Contact = (props) => {
                 </div>
                 <div id="success"></div>
                 <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
+                  Enviar Mensaje
                 </button>
               </form>
             </div>
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
-              <h3>Contact Info</h3>
+              <h3>Nuestros datos</h3>
               <p>
                 <span>
                   <i className="fa fa-map-marker"></i> Dirección

@@ -1,12 +1,13 @@
 import React from "react";
 
 export const About = (props) => {
+
   if (!props.data) return null;
   return (
     <div id="about">
       <div className="container">
         {/* Fila superior */}
-        <div className="row align-items-center mb-5">
+        <div className="row align-items-center mb-5" data-aos="fade-right">
           <div className="col-xs-12 col-md-6">
             <img src="img/about.jpg" className="img-responsive" alt="Nosotros" />
           </div>
@@ -19,7 +20,7 @@ export const About = (props) => {
         </div>
 
         {/* Fila invertida */}
-        <div className="align-items-center mb-5 reverse-custom">{/*Tuve que sacar la clase row de bootstrap para poder invertir la fila*/}
+        <div className="align-items-center mb-5 reverse-custom" data-aos="fade-left">{/*Tuve que sacar la clase row de bootstrap para poder invertir la fila*/}
           <div className="col-xs-12 col-md-6 order-md-2">
             <img src="img/about.jpg" className="img-responsive" alt="Nosotros" />
           </div>
@@ -39,7 +40,7 @@ export const About = (props) => {
               <h5>Ofrecemos soluciones adaptadas a cada necesidad</h5>
               <div className="row">
                 {/* Columna 1 */}
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
                     <img src={props.data.img} alt="Check" className="check-icon" />
                     <h4>Atención Personalizada</h4>
@@ -47,7 +48,7 @@ export const About = (props) => {
                   </div>
                 </div>
                 {/* Columna 2 */}
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
                     <img src={props.data.img} alt="Check" className="check-icon" />
                     <h4>Seguridad e Higiene</h4>
@@ -55,15 +56,15 @@ export const About = (props) => {
                   </div>
                 </div>
                 {/* Columna 3 */}
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
                   <img src={props.data.img} alt="Check" className="check-icon" />
                     <h4>Eficiencia</h4>
-                    <p>Nuestros vigiladores cuentan con los medios necesarios para desempeñarse con la mayor eficiencia.</p>
+                    <p>Nuestros vigiladores están equipados y capacitados para actuar con máxima eficacia en cada servicio.</p>
                   </div>
                 </div>
                 {/* Columna 4 */}
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
                     <img src={props.data.img} alt="Check" className="check-icon" />
                     <h4>Supervisión Constante</h4>
@@ -71,15 +72,15 @@ export const About = (props) => {
                   </div>
                 </div>
                 {/* Columna 5 */}
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
                     <img src={props.data.img} alt="Check" className="check-icon" />
                     <h4>Experiencia</h4>
-                    <p>Contamos con bases sólidas y personal jerárquico con más de 30 años de conocimientos en seguridad, permitiéndonos poder analizar cada uno de los objetivos e identificar cual es el mejor servicio para ofrecer en cada situación.</p>
+                    <p>Contamos con bases sólidas y personal jerárquico con más de 30 años de experiencia en seguridad, lo que nos permite analizar cada objetivo e identificar el servicio más adecuado para cada situación.</p>
                   </div>
                 </div>
                 {/* Columna 6 */}
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
                     <img src={props.data.img} alt="Check" className="check-icon" />
                     <h4>Compromiso y Adaptabilidad</h4>
@@ -94,8 +95,8 @@ export const About = (props) => {
         <div className="row">
           <div className="col-12">
             <div className="about-text">
-                <h3 className="text-center">Certificados</h3>
-                <p>{props.data ? props.data.paragraph2 : "Cargando..."}</p>
+                <h3 className="text-center">USAR IMAGEN A MITAD DE BRAND #11</h3>
+               {/* <p>{props.data ? props.data.paragraph2 : "Cargando..."}</p>*/}
             </div>
           </div>
         </div>

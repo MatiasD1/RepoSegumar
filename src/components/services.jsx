@@ -1,30 +1,36 @@
 import React from "react";
 
-export const Services = (props) => {
+export const Services = ({ data }) => {
+
   return (
     <div id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Our Services</h2>
+          <h2>Nuestros Servicios</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            Descubrí cómo podemos ayudarte. Estos son algunos de los servicios clave que ofrecemos para llevar tu proyecto al siguiente nivel.
           </p>
         </div>
-        <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
-                  {" "}
-                  <i className={d.icon}></i>
-                  <div className="service-desc">
-                    <h3>{d.name}</h3>
-                    <p>{d.text}</p>
-                  </div>
-                </div>
-              ))
-            : "loading"}
+
+        <div className="services-zigzag">
+  {data
+    ? data.map((item, index) => (
+        <div
+          className={`service-row ${index % 2 === 0 ? "normal" : "reverse"}`}
+          key={index}
+          data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+        >
+          <div className="service-image">
+            <img src={item.image} alt={item.name} />
+          </div>
+          <div className="service-text">
+            <h3>{item.name}</h3>
+            <p>{item.text}</p>
+          </div>
         </div>
+      ))
+    : "loading..."}
+</div>
       </div>
     </div>
   );
