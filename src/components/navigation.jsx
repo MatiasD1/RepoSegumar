@@ -36,7 +36,7 @@ export const Navigation = () => {
               handleScrollTo("page-top");
             }}
           >
-            <img src="img/logoSegumar.png" alt="Segumar Logo" />
+            <img src="img/logoSegumar.png" className="logoSegumar" alt="Segumar Logo" />
           </a>
 
         </div>
