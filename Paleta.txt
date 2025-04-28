@@ -64,4 +64,4 @@ photopea.com
 
 Gotham Pro - 100 px - 150 px - Regular - Medium 
 
-En vez del margin-top: 80px; en #header, hacer que el navbar no se ponga encima del header
+Usar otra foto del carrusel para poner la frase, que la de la radio quede solo con Segumar. 

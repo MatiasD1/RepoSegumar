@@ -4,14 +4,15 @@ export const Services = ({ data }) => {
 
   return (
     <div id="services" className="text-center">
+      <img src="img/SSservicios.png" alt="Nuestros servicios" className="serviciosTitulo" />
       <div className="container">
-        <div className="section-title">
+      {/*   <div className="section-title">
           <h2>Nuestros Servicios</h2>
           <p>
             Descubrí cómo podemos ayudarte. Estos son algunos de los servicios clave que ofrecemos para llevar tu proyecto al siguiente nivel.
           </p>
         </div>
-
+      */}
         <div className="services-zigzag">
   {data
     ? data.map((item, index) => (

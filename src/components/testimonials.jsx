@@ -3,9 +3,10 @@ import React from "react";
 export const Testimonials = (props) => {
   return (
     <div id="testimonials">
+      <img src="img/SSconfian.png" alt="Confían en nosotros" className="confian"/>
       <div className="container">
         <div className="section-title text-center">
-          <h2>What our clients say</h2>
+          
         </div>
         <div className="row">
           {props.data

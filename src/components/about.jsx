@@ -1,5 +1,4 @@
 import React from "react";
-
 export const About = (props) => {
 
   if (!props.data) return null;
@@ -42,7 +41,7 @@ export const About = (props) => {
                 {/* Columna 1 */}
                 <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
-                    <img src={props.data.img} alt="Check" className="check-icon" />
+                  <i class="fas fa-check"  ></i>
                     <h4>Atención Personalizada</h4>
                     <p>Brindamos atención personalizada, logrando una rápida respuesta gracias a una estructura flexible y una base de operaciones las 24hs.</p>
                   </div>
@@ -50,7 +49,7 @@ export const About = (props) => {
                 {/* Columna 2 */}
                 <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
-                    <img src={props.data.img} alt="Check" className="check-icon" />
+                    <i class="fas fa-check"  ></i>
                     <h4>Seguridad e Higiene</h4>
                     <p>Contamos con un departamento de seguridad e higiene. Función clave y de vital importancia en nuestra organización.</p>
                   </div>
@@ -58,7 +57,7 @@ export const About = (props) => {
                 {/* Columna 3 */}
                 <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
-                  <img src={props.data.img} alt="Check" className="check-icon" />
+                  <i class="fas fa-check"  ></i>
                     <h4>Eficiencia</h4>
                     <p>Nuestros vigiladores están equipados y capacitados para actuar con máxima eficacia en cada servicio.</p>
                   </div>
@@ -66,7 +65,7 @@ export const About = (props) => {
                 {/* Columna 4 */}
                 <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
-                    <img src={props.data.img} alt="Check" className="check-icon" />
+                  <i class="fas fa-check"  ></i>
                     <h4>Supervisión Constante</h4>
                     <p>Efectuamos supervisiones de los servicios constantemente con el objetivo de asegurar la eficaz custodia del patrimonio de la familia o empresa contratante.</p>
                   </div>
@@ -74,7 +73,7 @@ export const About = (props) => {
                 {/* Columna 5 */}
                 <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
-                    <img src={props.data.img} alt="Check" className="check-icon" />
+                    <i class="fas fa-check"  ></i>
                     <h4>Experiencia</h4>
                     <p>Contamos con bases sólidas y personal jerárquico con más de 30 años de experiencia en seguridad, lo que nos permite analizar cada objetivo e identificar el servicio más adecuado para cada situación.</p>
                   </div>
@@ -82,7 +81,7 @@ export const About = (props) => {
                 {/* Columna 6 */}
                 <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                   <div className="reason-item">
-                    <img src={props.data.img} alt="Check" className="check-icon" />
+                    <i class="fas fa-check"  ></i>
                     <h4>Compromiso y Adaptabilidad</h4>
                     <p>Nos involucramos con responsabilidad y ética en cada proyecto, brindando soluciones flexibles y alineadas a las necesidades de nuestros clientes.</p>
                   </div>
@@ -91,17 +90,9 @@ export const About = (props) => {
             </div>
           </div>
         </div>
-
-        <div className="row">
-          <div className="col-12">
-            <div className="about-text">
-                <h3 className="text-center">USAR IMAGEN A MITAD DE BRAND #11</h3>
-               {/* <p>{props.data ? props.data.paragraph2 : "Cargando..."}</p>*/}
-            </div>
-          </div>
-        </div>
-
+        
       </div>
+      <img src="img/SS anmac.jpg" alt="Anmac" className="anmacImg" />
     </div>
   );
 };
