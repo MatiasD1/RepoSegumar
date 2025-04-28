@@ -1,12 +1,10 @@
 body,
 html {
   font-family: "Gotham Pro", sans-serif;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
+
   color: #777;
   font-weight: 400;
-  width: 100% !important;
-  height: 100% !important;
+
   object-fit: cover !important;
   margin: 0; /* para eliminar la franja blanca a la derecha del body*/
   background-color: #FAFAFA;
@@ -93,19 +91,19 @@ hr {
 
 /* Navigation */
 #menu {
-  padding: 15px;
-  transition: all 0.8s;
+  position: right;
+  transition: all 0.8s; 
 }
 #menu .navbar-header {
-  display: flex;
-  align-items: center;
   width: 100%;
 }
 
 #menu .collapse.navbar-collapse {
   margin-left: auto;
+  justify-content: center;
 }
 #menu.navbar-default {
+
   background-color: rgb(255, 1, 22);
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -113,20 +111,20 @@ hr {
 
 #menu a.navbar-brand {
   position: absolute;
-  left: 5%;
   top: 58%;
   transform: translateY(-50%);
   padding: 0;
+
 }
 
 #menu a.navbar-brand img {
-  height: 42px; /* tu tamaño ya definido */
+  height: 44px; 
 }
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Gotham Pro", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   padding: 8px 2px;
   border-radius: 0;
@@ -173,23 +171,30 @@ hr {
 .navbar-default .navbar-toggle:hover > .icon-bar {
   background-color: rgb(255, 1, 22);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   
-  #menu {
-    padding-left: 20px !important;
+  #menu .navbar-header {
+    display: flex;
+    width: 100%;
   }
   #menu a.navbar-brand {
-    position: static;
+    justify-content: center !important;
+    position:relative;
     transform: none;
     gap: 20px;
     margin: 0;
   }
 
   #menu .navbar-header {
+    margin-top: 7px;
     justify-content: space-between;
     flex-direction: row-reverse;
   }
-  
+  #menu.navbar-default .navbar-nav > li > a {
+    padding: 5px;
+    border-radius: 0;
+    margin: 0px 20px 0;
+  }
   .logoSegumar{
     padding-right: 20px !important;
   }
@@ -199,7 +204,13 @@ hr {
   #menu {
     padding: 5px !important;
   }
-  
+  #menu .navbar-header {
+    display:block;
+    width: 100%;
+  }
+  #menu a.navbar-brand img {
+    height: 44px;
+}
 }
 .section-title {
   margin-bottom: 70px;
@@ -266,6 +277,7 @@ a:focus,
 }
 /* Header Section */
 #header {
+  margin-top: 50px;
   position: relative;
   height: 100vh;
   overflow: hidden;
