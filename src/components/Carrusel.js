@@ -31,10 +31,10 @@ const Carrusel = () => {
         <img src="img/radio2.png" className="imgCarrusel" alt="slide1" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="img/radio2.png" className="imgCarrusel" alt="slide2" />
+        <img src="img/slide2.jpg" className="imgCarrusel" alt="slide2" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="img/radio2.png" className="imgCarrusel" alt="slide3" />
+        <img src="img/familia.png" className="imgCarrusel" alt="slide3" />
       </SwiperSlide>
     </Swiper>
   );
