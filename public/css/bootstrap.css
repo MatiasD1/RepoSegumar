@@ -11,6 +11,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: #FAFAFA;
 }
 article,
 aside,
@@ -1085,7 +1086,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 input,
 button,
@@ -4236,7 +4237,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-collapse {
-    margin-right: 0;
+    
     margin-left: 0;
   }
 }

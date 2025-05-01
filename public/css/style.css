@@ -4,10 +4,11 @@ html {
 
   color: #777;
   font-weight: 400;
-
+  box-sizing: border-box;
+  overflow-x: hidden;
   object-fit: cover !important;
   margin: 0; /* para eliminar la franja blanca a la derecha del body*/
-  background-color: #FAFAFA;
+  background-color: #FAFAFA !important;
 }
 h2,
 h3,
@@ -103,7 +104,6 @@ hr {
   justify-content: center;
 }
 #menu.navbar-default {
-
   background-color: rgb(255, 1, 22);
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -114,7 +114,6 @@ hr {
   top: 58%;
   transform: translateY(-50%);
   padding: 0;
-
 }
 
 #menu a.navbar-brand img {
@@ -126,7 +125,7 @@ hr {
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
-  padding: 8px 2px;
+  padding: 8px 2px 12px 2px;
   border-radius: 0;
   margin: 9px 20px 0;
 }
@@ -176,6 +175,7 @@ hr {
   #menu .navbar-header {
     display: flex;
     width: 100%;
+    
   }
   #menu a.navbar-brand {
     justify-content: center !important;
@@ -190,6 +190,13 @@ hr {
     justify-content: space-between;
     flex-direction: row-reverse;
   }
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+  }
+    
   #menu.navbar-default .navbar-nav > li > a {
     padding: 5px;
     border-radius: 0;
@@ -455,6 +462,7 @@ header .intro-text {
   border-right: 0;
 }
 #about p {
+  display: flex;
   text-align: justify;
   font-size: 18px;
   line-height: 30px;
@@ -464,48 +472,54 @@ header .intro-text {
 #about .mb-5 {
   margin-bottom: 3rem;
 }
+
 #about .about-text {
   padding: 20px 0 0 0;
   width: 100%;
+  justify-content: center;
 }
 #about .reverse-custom {
   flex-direction: row-reverse;
   display: flex;
 }
+
 #about .reason-item {
   margin-bottom: 10px;
   text-align: center;
   background-color: #FAFAFA;
+  flex-direction: column;
+  justify-content: center;
 }
-
-#about .reason-item h4 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-family: "Gotham Pro";
-  font-weight: 600;
-}
-
-#about .reason-item p {
+.razones-container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 18px;
-  color: #666;
+  padding: 40px 20px 0px 20px;
 }
-.check-icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-bottom: 5px;
-  display: inline;
-  margin-left: auto;
-  margin-right: auto;
+
+.fila {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .reason-item {
-  text-align: center;
-  padding: 10px 20px 0px 20px;
-  margin-bottom: 30px;
-
+  flex: 1 1 300px;
+  max-width: 350px;
+  background-color: #FAFAFA;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
+
+.reason-item i {
+  font-size: 24px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
 
 #about .anmacImg{
   width: 100%;
@@ -518,24 +532,25 @@ header .intro-text {
   background-color: #FAFAFA;
   color: black;
 }
-  #services .serviciosTitulo{
-    width: 100%;
+  #services .imagenTitulo{ /* Imagen queda mas chica que el 100% y pegada a la izquierda*/
+    width: 95%;
+    display: block;
+    margin: 0;
   }
 
   .section-title h2 {
     position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      background: rgba(255, 255, 255, 0.3);
-      height: 4px;
-      width: 60px;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
-
+  .section-title h2::after{
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    height: 4px;
+    width: 60px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .section-title p {
     margin-top: 15px;
   }
@@ -544,6 +559,8 @@ header .intro-text {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 30px 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .service-row {
@@ -551,25 +568,27 @@ header .intro-text {
     flex-wrap: wrap;
     align-items: center;
     margin: 40px 0;
+  }
+  .service-row.reverse {
+  flex-direction: row-reverse;
+  }
 
-    &.reverse {
-      flex-direction: row-reverse;
-    }
 
     .service-image {
       flex: 1;
       padding: 10px;
-      img {
-        max-width: 100%;
-        border-radius: 10px;
-      }
+    
     }
-
+    .service-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
     .service-text {
       flex: 1;
       padding: 10px;
       text-align: left;
-
+      background-color: #fafafa;
+    }
       h3 {
         font-size: 24px;
         margin-bottom: 10px;
@@ -578,8 +597,6 @@ header .intro-text {
       p {
         font-size: 16px;
       }
-    }
-  }
 
   @media (max-width: 768px) {
     .service-row {
@@ -642,67 +659,33 @@ header .intro-text {
 .hover-bg:hover .hover-text {
   opacity: 1;
 }
-/* Testimonials Section */
-#testimonials {
-  padding: 100px 0;
-  background: #f6f6f6;
+/* Marcas Section */
+.marcas{
+  background-color: #FAFAFA !important;
 }
-#testimonials .confian{
-  width: 100%;
-}
-#testimonials i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-.testimonial {
-  position: relative;
-  padding: 20px;
-}
-.testimonial-image {
-  float: left;
-  margin-right: 15px;
-}
-.testimonial-image,
-.testimonial-image img {
+.marcas img{
+  width: 95%;
   display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  margin: 0;
 }
-.testimonial-content {
-  position: relative;
-  overflow: hidden;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* espacio entre columnas */
+  flex-wrap: wrap;
 }
-.testimonial-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-  font-style: italic;
+.logo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.testimonial-meta {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #666;
+
+.logo-column img {
+  max-width: 100%;
+  height: auto;
 }
-/* Team Section */
-#team {
-  padding: 100px 0;
-}
-#team h4 {
-  margin: 5px 0;
-}
-#team .team-img {
-  width: 240px;
-}
-#team .thumbnail {
-  background: transparent;
-  border: 0;
-}
-#team .thumbnail .caption {
-  padding: 10px 0 0;
-  color: #888;
-}
+
+
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
@@ -727,8 +710,7 @@ header .intro-text {
 }
 #contact .section-title h2 {
   font-size: 6vw; /* Tamaño de fuente que se adapta */
-  word-break: break-word; /* Si se pasa, que corte la palabra */
-  overflow-wrap: break-word;
+
 }
 
 #contact .section-title h2::after {

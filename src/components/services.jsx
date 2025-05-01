@@ -19,7 +19,7 @@ export const Services = ({ data }) => {
   
   return (
     <div id="services" className="text-center">
-      <img src="img/SSservicios.png" alt="Nuestros servicios" className="serviciosTitulo" />
+      <img src="img/SSservicios.png" alt="Nuestros servicios" className="imagenTitulo" />
       <div className="container">
       {/*   <div className="section-title">
           <h2>Nuestros Servicios</h2>

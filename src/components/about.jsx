@@ -32,67 +32,52 @@ export const About = (props) => {
 
 
         {/* Por qué confiar */}
-        <div className="row">
-          <div className="col-12">
+        <div className="row justify-content-center">
             <div className="about-text">
-              <h3>¿Por qué confiar en nosotros?</h3>
-              <h5>Ofrecemos soluciones adaptadas a cada necesidad</h5>
-              <div className="row">
-                {/* Columna 1 */}
-                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                  <div className="reason-item">
-                  <i class="fas fa-check"  ></i>
-                    <h4>Atención Personalizada</h4>
-                    <p>Brindamos atención personalizada, logrando una rápida respuesta gracias a una estructura flexible y una base de operaciones las 24hs.</p>
-                  </div>
-                </div>
-                {/* Columna 2 */}
-                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                  <div className="reason-item">
-                    <i class="fas fa-check"  ></i>
-                    <h4>Seguridad e Higiene</h4>
-                    <p>Contamos con un departamento de seguridad e higiene. Función clave y de vital importancia en nuestra organización.</p>
-                  </div>
-                </div>
-                {/* Columna 3 */}
-                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                  <div className="reason-item">
-                  <i class="fas fa-check"  ></i>
-                    <h4>Eficiencia</h4>
-                    <p>Nuestros vigiladores están equipados y capacitados para actuar con máxima eficacia en cada servicio.</p>
-                  </div>
-                </div>
-                {/* Columna 4 */}
-                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                  <div className="reason-item">
-                  <i class="fas fa-check"  ></i>
-                    <h4>Supervisión Constante</h4>
-                    <p>Efectuamos supervisiones de los servicios constantemente con el objetivo de asegurar la eficaz custodia del patrimonio de la familia o empresa contratante.</p>
-                  </div>
-                </div>
-                {/* Columna 5 */}
-                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                  <div className="reason-item">
-                    <i class="fas fa-check"  ></i>
-                    <h4>Experiencia</h4>
-                    <p>Contamos con bases sólidas y personal jerárquico con más de 30 años de experiencia en seguridad, lo que nos permite analizar cada objetivo e identificar el servicio más adecuado para cada situación.</p>
-                  </div>
-                </div>
-                {/* Columna 6 */}
-                <div className="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                  <div className="reason-item">
-                    <i class="fas fa-check"  ></i>
-                    <h4>Compromiso y Adaptabilidad</h4>
-                    <p>Nos involucramos con responsabilidad y ética en cada proyecto, brindando soluciones flexibles y alineadas a las necesidades de nuestros clientes.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <h3>¿Por qué confiar en nosotros?</h3> 
+              {/*<h5>Ofrecemos soluciones adaptadas a cada necesidad</h5>*/}
+              <div className="razones-container">
+ {/*<h3>¿Por qué confiar en nosotros?</h3>*/}
+  <div className="fila">
+    <div className="reason-item" data-aos="fade-up">
+      <i className="fas fa-check"></i>
+      <h4>Atención Personalizada</h4>
+      <p>Brindamos atención personalizada, logrando una rápida respuesta gracias a una estructura flexible y una base de operaciones las 24hs.</p>
+    </div>
+    <div className="reason-item" data-aos="fade-up">
+      <i className="fas fa-check"></i>
+      <h4>Seguridad e Higiene</h4>
+      <p>Contamos con un departamento de seguridad e higiene. Función clave y de vital importancia en nuestra organización.</p>
+    </div>
+    <div className="reason-item" data-aos="fade-up">
+      <i className="fas fa-check"></i>
+      <h4>Eficiencia</h4>
+      <p>Nuestros vigiladores están equipados y capacitados para actuar con máxima eficacia en cada servicio.</p>
+    </div>
+  </div>
+  <div className="fila">
+    <div className="reason-item" data-aos="fade-up">
+      <i className="fas fa-check"></i>
+      <h4>Supervisión Constante</h4>
+      <p>Efectuamos supervisiones de los servicios constantemente con el objetivo de asegurar la eficaz custodia del patrimonio de la familia o empresa contratante.</p>
+    </div>
+    <div className="reason-item" data-aos="fade-up">
+      <i className="fas fa-check"></i>
+      <h4>Experiencia</h4>
+      <p>Contamos con bases sólidas y personal jerárquico con más de 30 años de experiencia en seguridad, lo que nos permite analizar cada objetivo e identificar el servicio más adecuado para cada situación.</p>
+    </div>
+    <div className="reason-item" data-aos="fade-up">
+      <i className="fas fa-check"></i>
+      <h4>Compromiso y Adaptabilidad</h4>
+      <p>Nos involucramos con responsabilidad y ética en cada proyecto, brindando soluciones flexibles y alineadas a las necesidades de nuestros clientes.</p>
+    </div>
+  </div>
+</div>
+
         </div>
-        
+        </div>
       </div>
-      <img src="img/SS anmac.jpg" alt="Anmac" className="anmacImg" />
+      <img src="img/SS anmac.png" alt="Anmac" className="anmacImg" />
     </div>
   );
 };
