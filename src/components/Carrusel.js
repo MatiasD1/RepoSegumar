@@ -1,41 +1,66 @@
-// Carrusel.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Slide1 from "../"
-// Import Swiper styles
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Módulos necesarios
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
+const imagesDesktop = [
+  "img/Slide1Escritorio.png",
+  "img/Slide2Escritorio.png",
+  "img/Slide3Escritorio.png",
+];
+
+const imagesTablet = [
+  "img/Slide1Tablet.png",
+  "img/Slide2Tablet.png",
+  "img/Slide3Tablet.png",
+];
+
+const imagesMobile = [
+  "img/Slide1Movil.png",
+  "img/Slide2Movil.png",
+  "img/Slide3Movil.png",
+];
 
 const Carrusel = () => {
+  const [images, setImages] = useState(imagesDesktop);
+
+  useEffect(() => {
+    const updateImages = () => {
+      const width = window.innerWidth;
+
+      if (width <= 767) {
+        setImages(imagesMobile);
+      } else if (width <= 1024) {
+        setImages(imagesTablet);
+      } else {
+        setImages(imagesDesktop);
+      }
+    };
+
+    updateImages(); // carga inicial
+    window.addEventListener('resize', updateImages); // detecta cambios
+
+    return () => window.removeEventListener('resize', updateImages);
+  }, []);
+
   return (
     <Swiper
       spaceBetween={30}
       effect="fade"
       navigation
-      //pagination={{ clickable: true }}
       loop={true}
       modules={[EffectFade, Navigation, Pagination, Autoplay]}
       className="mySwiper"
-      autoplay={{
-        delay: 4000, // tiempo en milisegundos (4 segundos)
-        disableOnInteraction: false, // sigue aunque el usuario interactúe
-      }}
-      
+      autoplay={{ delay: 4000, disableOnInteraction: false }}
     >
-      <SwiperSlide>
-        <img src="img/radio2.png" className="imgCarrusel" alt="slide1" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="img/slide2.jpg" className="imgCarrusel" alt="slide2" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="img/familia.png" className="imgCarrusel" alt="slide3" />
-      </SwiperSlide>
+      {images.map((src, index) => (
+        <SwiperSlide key={index}>
+          <img src={src} className="imgCarrusel" alt={`slide-${index}`} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

@@ -6,30 +6,30 @@ export const About = (props) => {
     <div id="about">
       <div className="container">
         {/* Fila superior */}
-        <div className="row align-items-center mb-5" data-aos="fade-right">
-          <div className="col-xs-12 col-md-6">
-            <img src="img/about.jpg" className="img-responsive" alt="Nosotros" />
-          </div>
-          <div className="col-xs-12 col-md-6">
-            <div className="about-text">
-              <h2>¿Quiénes Somos?</h2>
-              <p>{props.data ? props.data.paragraph : "Cargando..."}</p>
+          <div className="row align-items-center mb-5" data-aos="fade-right">
+            <div className="col-xs-12 col-md-6">
+              <img src="img/about.jpg" className="img-responsive" alt="Nosotros" />
+            </div>
+            <div className="col-xs-12 col-md-6">
+              <div className="about-text">
+                <h2>¿Quiénes Somos?</h2>
+                <p>{props.data ? props.data.paragraph : "Cargando..."}</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Fila invertida */}
-        <div className="align-items-center mb-5 reverse-custom" data-aos="fade-left">{/*Tuve que sacar la clase row de bootstrap para poder invertir la fila*/}
-          <div className="col-xs-12 col-md-6 order-md-2">
-            <img src="img/about.jpg" className="img-responsive" alt="Nosotros" />
-          </div>
-          <div className="col-xs-12 col-md-6 order-md-1">
-            <div className="about-text">
-              <p>{props.data ? props.data.paragraph2 : "Cargando..."}</p>
+          {/* Fila invertida */}
+          
+          <div className="align-items-center mb-5 rowReverseAbout" data-aos="fade-left">{/*Tuve que sacar la clase row de bootstrap para poder invertir la fila*/}
+            <div className="col-xs-12 col-md-6 order-md-2">
+              <img src="img/about.jpg" className="img-responsive" alt="Nosotros" />
+            </div>
+            <div className="col-xs-12 col-md-6 order-md-1">
+              <div className="about-text">
+                <p>{props.data ? props.data.paragraph2 : "Cargando..."}</p>
+              </div>
             </div>
           </div>
-        </div>
-
 
         {/* Por qué confiar */}
         <div className="row justify-content-center">
@@ -37,7 +37,7 @@ export const About = (props) => {
               <h3>¿Por qué confiar en nosotros?</h3> 
               {/*<h5>Ofrecemos soluciones adaptadas a cada necesidad</h5>*/}
               <div className="razones-container">
- {/*<h3>¿Por qué confiar en nosotros?</h3>*/}
+              {/*<h3>¿Por qué confiar en nosotros?</h3>*/}
   <div className="fila">
     <div className="reason-item" data-aos="fade-up">
       <i className="fas fa-check"></i>

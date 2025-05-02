@@ -1,7 +1,7 @@
 body,
 html {
   font-family: "Gotham Pro", sans-serif;
-
+  
   color: #777;
   font-weight: 400;
   box-sizing: border-box;
@@ -292,17 +292,18 @@ a:focus,
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
+  background-color: #FAFAFA;
+
 }
 
 .mySwiper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.mySwiper img {
+.imgCarrusel {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -334,21 +335,27 @@ a:focus,
   font-weight: 400;
 }
 
-/* ✅ Media query para pantallas pequeñas */
-@media (max-width: 767px) {
-  #header {
-    height: 60vh; /* Reduce la altura en móviles para no ocupar toda la pantalla */
+@media (max-width: 1024px) {
+  .mySwiper {
+    height: 100vh; 
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    padding: 20px;
-  }
-
-  :root {
-    --swiper-navigation-size: 2rem !important;
+  .imgCarrusel {
+    object-fit: cover; 
   }
 }
+
+@media (max-width: 767px) {
+  .mySwiper {
+    height: 100vh; 
+  }
+
+  .imgCarrusel {
+    object-fit: cover; 
+  }
+}
+
+
 
 /*
 .intro {
@@ -449,6 +456,12 @@ header .intro-text {
   list-style: none;
   padding: 0;
 }
+
+.rowReverseAbout {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 #about .about-text li:before {
   content: "\f00c";
   font-family: "FontAwesome";
