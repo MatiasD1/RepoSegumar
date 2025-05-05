@@ -335,7 +335,9 @@ a:focus,
   font-weight: 400;
 }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 1024px) and (orientation: portrait) {
+
   .mySwiper {
     height: 100vh; 
   }
@@ -705,6 +707,7 @@ header .intro-text {
   background: rgba(10, 5, 125);/*linear-gradient(to right, rgba(10, 5, 125) 0%, rgb(20, 9, 231) 100%);*/
   color: rgba(255, 255, 255, 0.75);
   width: 100%;
+  margin-top: 20px;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -722,7 +725,7 @@ header .intro-text {
   width: 100%;
 }
 #contact .section-title h2 {
-  font-size: 6vw; /* Tamaño de fuente que se adapta */
+  font-size: 4vw; /* Tamaño de fuente que se adapta */
 
 }
 

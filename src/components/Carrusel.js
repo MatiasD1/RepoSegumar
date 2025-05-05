@@ -30,16 +30,19 @@ const Carrusel = () => {
   useEffect(() => {
     const updateImages = () => {
       const width = window.innerWidth;
-
-      if (width <= 767) {
+      const height = window.innerHeight;
+    
+      if (width > height) {
+        setImages(imagesDesktop); // Horizontal = escritorio
+      } else if (width <= 767) {
         setImages(imagesMobile);
-      } else if (width <= 1024) {
-        setImages(imagesTablet);
       } else {
-        setImages(imagesDesktop);
+        setImages(imagesTablet);
       }
-    };
+      
 
+    };
+    
     updateImages(); // carga inicial
     window.addEventListener('resize', updateImages); // detecta cambios
 
