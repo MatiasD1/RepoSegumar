@@ -4,7 +4,7 @@ import AOS from "aos";
 import 'aos/dist/aos.css';
 
 import { Navigation } from "./components/navigation";
-import { Header } from "./components/header";
+import Carrusel from "./components/Carrusel";
 import { Features } from "./components/features";
 import { About } from "./components/about";
 import { Services } from "./components/services";
@@ -17,6 +17,8 @@ import { Wpp } from "./components/wpp";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import { Marcas } from "./components/marcas";
+import { SeguridadFisica } from "./components/seguridadFisica";
+import { SeguridadElectronica } from "./components/seguridadElectronica";
 //import { Page2 } from "./pages/page2";
 
 
@@ -42,15 +44,19 @@ const App = () => {
   return (
     <Router>
       <Navigation />
+      <Carrusel />
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Header data={landingPageData.Header} />
+              
              {/* <Features data={landingPageData.Features} /> */}
               <About data={landingPageData.About} />
               <Services data={landingPageData.Services} />
+              <SeguridadFisica/>
+              <SeguridadElectronica/>
+              
               {/*<Gallery data={landingPageData.Gallery} />*/}
               <Marcas/>
               {/*<Team data={landingPageData.Team} />*/}

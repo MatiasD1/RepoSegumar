@@ -282,7 +282,8 @@ a:focus,
   outline: none;
   outline-offset: none;
 }
-/* Header Section */
+
+/*
 #header {
   margin-top: 50px;
   position: relative;
@@ -295,10 +296,12 @@ a:focus,
   background-color: #FAFAFA;
 
 }
+*/
+/* Carrusel Section */
 
 .mySwiper {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 0px); /* resta la altura del navbar */
   position: relative;
   overflow: hidden;
 }
@@ -309,6 +312,7 @@ a:focus,
   object-fit: cover;
   display: block;
 }
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -479,7 +483,7 @@ header .intro-text {
 #about p {
   display: flex;
   text-align: justify;
-  font-size: 18px;
+  font-size: 2rem;
   line-height: 30px;
   margin: 20px 0;
   width: 100%;
@@ -594,10 +598,12 @@ header .intro-text {
       padding: 10px;
     
     }
+
     .service-image img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
+  max-width: 100%;
+  border-radius: 10px;
+}
+
     .service-text {
       flex: 1;
       padding: 10px;
@@ -624,6 +630,98 @@ header .intro-text {
     }
   }
 
+/* Seguridad Física */  
+
+/* Contenedor principal */
+.containerSF {
+  width: 100%;
+  padding: 50px 0px;
+  background-color: #f9f9f9;  /* Color de fondo suave */
+}
+
+/* Estilo para el título de la sección */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contenedor para las dos columnas */
+.seguridad-contenedor {
+  display: flex;
+}
+
+/* Estilos para la columna izquierda */
+.seguridad-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 50%;
+}
+.iconoServicios{
+  width: 4rem;
+}
+
+.seguridad-titulo {
+  justify-content: center;
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.seguridad-parrafo {
+  text-align: center;
+  padding: 2px 14rem;
+  font-size: 2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+
+}
+
+/* Estilos para la columna derecha (imagen) */
+.seguridad-imagen-contenedor {
+  position: relative;
+  width: 50%;
+  max-width: 100%;
+}
+
+.seguridad-imagen {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilos de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .seguridad-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seguridad-texto {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .seguridad-imagen-contenedor {
+    width: 80%;
+  }
+}
 
 /* Portfolio Section */
 #portfolio {

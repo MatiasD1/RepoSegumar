@@ -58,8 +58,7 @@
   "Services": [
     {
       "name": "Nombre del Servicio",
-      "text": "Descripción breve del servicio.",
-      "image": "url-o-ruta-de-la-imagen.jpg"
+      "custom": "Descripción breve del servicio."
     },
     {
       "name": "Nombre del Servicio",

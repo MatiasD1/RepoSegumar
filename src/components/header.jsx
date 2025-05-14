@@ -4,7 +4,7 @@ import Carrusel from "./Carrusel";
 export const Header = (props) => {
   return (
     <header id="header">
-  <Carrusel /> {/* <- Directamente como fondo del header */}
+   {/* <- Directamente como fondo del header */}
  {/* <div className="intro">
     <div className="overlay">
       <div className="container">

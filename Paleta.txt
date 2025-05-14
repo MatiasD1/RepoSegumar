@@ -69,3 +69,5 @@ Mejorar calidad de imagen Cuenta con la autorización de
 Arreglar responsive del carrusel para Surface Duo
 Fotos de la empresa para #About 
 Preguntar qué data quieren pedir en el Contacto. Cel?
+
+
