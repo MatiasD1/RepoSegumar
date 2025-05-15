@@ -46,34 +46,28 @@ export const Contact = (props) => {
                 </p>
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Nombre"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
+                <div className="form-row">
+                  <div className="form-group half-width">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="form-control"
+                      placeholder="Nombre"
+                      required
+                      onChange={handleChange}
+                    />
                   </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
+                  <div className="form-group half-width">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="form-control"
+                      placeholder="Email"
+                      required
+                      onChange={handleChange}
+                    />
                   </div>
                 </div>
                 <div className="form-group">
@@ -86,13 +80,10 @@ export const Contact = (props) => {
                     required
                     onChange={handleChange}
                   ></textarea>
-                  <p className="help-block text-danger"></p>
                 </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Enviar Mensaje
-                </button>
+                <button type="submit" className="btn btn-custom btn-lg">Enviar Mensaje</button>
               </form>
+
             </div>
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
