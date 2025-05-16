@@ -3,6 +3,7 @@ PALETA
 Rojo: #ff0116
 Verde: #C3FF26
 Azul: #0A057D
+Negro: #333333
 
 Elemento		Color sugerido
 Logo y branding		Rojo y blanco
@@ -69,5 +70,4 @@ Mejorar calidad de imagen Cuenta con la autorización de
 Arreglar responsive del carrusel para Surface Duo
 Fotos de la empresa para #About 
 Preguntar qué data quieren pedir en el Contacto. Cel?
-
-
+Que SF y AM tengan el mismo diseño y que la app tenga el diseño con la foto al costado

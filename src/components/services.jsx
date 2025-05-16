@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import AOS from "aos";
-import { SeguridadFisica } from "./seguridadFisica";
+import { SeguridadFisica } from "./alarmaMonitoreada";
 
 export const Services = ({ data }) => {
 

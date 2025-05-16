@@ -17,8 +17,9 @@ import { Wpp } from "./components/wpp";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import { Marcas } from "./components/marcas";
+import { AlarmaMonitoreada } from "./components/alarmaMonitoreada";
 import { SeguridadFisica } from "./components/seguridadFisica";
-import { SeguridadElectronica } from "./components/seguridadElectronica";
+import { HogarSeguroApp } from "./components/hogarSeguroApp";
 //import { Page2 } from "./pages/page2";
 
 
@@ -53,9 +54,10 @@ const App = () => {
               
              {/* <Features data={landingPageData.Features} /> */}
               <About data={landingPageData.About} />
-              <Services data={landingPageData.Services} />
+             {/*<Services data={landingPageData.Services} />*/} 
               <SeguridadFisica/>
-              <SeguridadElectronica/>
+              <AlarmaMonitoreada/>
+              <HogarSeguroApp/>
               
               {/*<Gallery data={landingPageData.Gallery} />*/}
               <Marcas/>
