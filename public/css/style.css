@@ -219,6 +219,39 @@ hr {
     height: 44px;
 }
 }
+/* Solo visible en móviles */
+@media (max-width: 767px) {
+  .whatsapp-bar {
+    background-color: #fafafa;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0%; /* Altura del navbar (ajustala si es necesario) */
+    z-index: 9998;
+  }
+  .wpp{
+    display: none;
+  }
+  .whatsapp-button2 {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #ff0116;
+    border-radius: 5px;
+    display: inline-block;
+  }
+}
+
+/* En pantallas grandes no se muestra */
+@media (min-width: 768px) {
+  .whatsapp-bar {
+    display: none;
+  }
+}
+
 .section-title {
   margin-bottom: 70px;
 }
@@ -538,7 +571,7 @@ header .intro-text {
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent; /* Importante para mantener el espacio */
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
 }
 .reason-item:hover{
   border: 2px solid #ff0116;
