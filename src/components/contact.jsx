@@ -141,7 +141,7 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2025 B-Logic. Design by{" "}
+            &copy; 2025 Design by B-Logic{" "}
           </p>
         </div>
       </div>

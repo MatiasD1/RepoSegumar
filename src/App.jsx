@@ -29,18 +29,27 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({});
+ const [landingPageData, setLandingPageData] = useState({});
+
+  // Cargo datos de JSON
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
+  // Inicializo AOS solo una vez
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      offset: 120, // default es 120, podés bajarlo para que se active antes
-      once: true
+      offset: 120,
+      once: true,
+      anchorPlacement: "top-bottom",
     });
   }, []);
+
+  // Refresca AOS tras cada render para recalcular posiciones
+  useEffect(() => {
+    AOS.refresh();
+  });
 
   return (
     <Router>

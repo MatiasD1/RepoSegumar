@@ -477,8 +477,9 @@ header .intro-text {
   width: 100%;
 }
 #about h2 {
+  font-size: 4.5rem;
   position: relative;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   text-align: center;
 }
 #about h2::after {
@@ -809,7 +810,10 @@ header .intro-text {
 .alarmaMonitoreadaContainer {
   display: flex;
 }
-
+.alarmaMonitoreadaContainerReverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
 /* Estilos para la columna izquierda */
 .alarmaMonitoreadaTexto {
   display: flex;
@@ -843,11 +847,25 @@ header .intro-text {
 
 /* Estilos para la columna derecha (imagen) */
 .alarmaMonitoreadaImgContainer {
+  display: flex;
   position: relative;
   width: 40%;
   max-width: 100%;
+  justify-content: center;
+  font-family: "Swiss 721", sans-serif;
+  color: #fafafa;
+  text-transform: uppercase;
 }
 
+.tituloApp{
+ 
+  position: absolute;
+  font-size: 6.5rem;
+  top: 30%;
+  text-align: center;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px #000000;
+}
 .alarmaMonitoreadaImg {
   width: 100%;
   height: 100%;
