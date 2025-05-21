@@ -20,7 +20,13 @@ export const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-        
+    
+    // 1) Dispara el evento de conversión de Google Ads
+    if (window.gtag_report_conversion) {
+        window.gtag_report_conversion();
+    }
+
+    // 2) Envía el formulario por emailjs
     emailjs
       .sendForm("service_pfegfbb", "template_xqjuas7", e.target, "eT_lyfkkg2ZsiG33P")
       .then(

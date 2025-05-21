@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
@@ -21,7 +22,6 @@ import { AlarmaMonitoreada } from "./components/alarmaMonitoreada";
 import { SeguridadFisica } from "./components/seguridadFisica";
 import { HogarSeguroApp } from "./components/hogarSeguroApp";
 //import { Page2 } from "./pages/page2";
-
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -51,8 +51,68 @@ const App = () => {
     AOS.refresh();
   });
 
+  const basename = process.env.NODE_ENV === "production"
+  ? "/RepoSegumar"
+  : "/";
+
   return (
-    <Router>
+    <>
+    <Helmet>
+      {/* LinkedIn Insight Tag */}
+      <script type="text/javascript">
+        {`
+          _linkedin_partner_id = "8414809";
+          window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+          window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        `}
+      </script>
+      <script type="text/javascript">
+        {`
+          (function(l) {
+            if (!l) {
+              window.lintrk = function(a, b) { window.lintrk.q.push([a, b]) };
+              window.lintrk.q = [];
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+          })(window.lintrk);
+        `}
+      </script>
+      <noscript>
+    {`
+      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8414809&fmt=gif" />
+    `}
+  </noscript>
+      {/* —————— Inyección de Google Ads en <head> —————— */}
+        {/* 1) Carga de la librería gtag */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17096308913"
+        />
+        {/* 2) Configuración y función de conversión */}
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'AW-17096308913');
+
+          window.gtag_report_conversion = function(url) {
+            var callback = function(){
+              if (url) window.location = url;
+            };
+            gtag('event', 'conversion', {
+              send_to: 'AW-17096308913/TOtWCMTS-MoaELHxk9g_',
+              event_callback: callback
+            });
+            return false;
+          };
+        `}</script>
+    </Helmet>
+    <Router basename={basename}>
       <Navigation />
       <Carrusel />
       <Routes>
@@ -79,6 +139,7 @@ const App = () => {
        {/*  <Route path="/page2" element={<Page2 data={landingPageData.About}/>} />*/}
       </Routes>
     </Router>
+  </>
   );
 };
 
