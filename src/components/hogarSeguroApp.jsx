@@ -9,7 +9,7 @@ export const HogarSeguroApp = (props) => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.
           </p>
         </div>*/}
-        <div className="AppContainer">
+        <div className="AppContainer" id="AppHogarSeguro">
           <div className="AppTexto" data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="200"

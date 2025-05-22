@@ -3,7 +3,7 @@ import React from "react";
 export const SeguridadFisica = (props) => {
   return (
     <div>
-      <div className="encabezadoContainer">
+      <div className="encabezadoContainer" id="seguridadFisica">
         <h1 className="encabezadoSF">Seguridad Física</h1>
         <img src="img/SeguridadFisicaS.png" className="TituloS" />
       </div>

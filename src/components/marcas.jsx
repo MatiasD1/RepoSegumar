@@ -2,7 +2,7 @@ import React from "react";
 
 export const Marcas = (props) => {
   return (
-    <div className="marcas">
+    <div className="marcas" id="marcas">
       <img src="img/SSconfian2.png" alt="Confían en nosotros" className="imagenTitulo"/>
       <div class="logo-column">
         <img src="img/marcas1.png" alt="Logos 1"  data-aos="fade-zoom-in" data-aos-easing="ease-in-back"

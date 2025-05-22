@@ -48,27 +48,27 @@ export const Navigation = () => {
           >
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="#features" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("features"); }}>
+              <a href="#features" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("about"); }}>
                 Quienes somos
               </a>
             </li>
             <li>
-              <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("about"); }}>
+              <a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("seguridadFisica"); }}>
                 Seguridad Física
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("services"); }}>
-                Seguridad Electrónica
+              <a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("alarmaMonitoreada"); }}>
+                Alarma Monitoreada
               </a>
             </li>
-        {/*   <li>
-              <a href="#portfolio" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("portfolio"); }}>
-                Gallery
+           <li>
+              <a href="#portfolio" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("AppHogarSeguro"); }}>
+                App Hogar Seguro
               </a>
-            </li>*/}
+            </li>
             <li>
-              <a href="#testimonials" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("testimonials"); }}>
+              <a href="#testimonials" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("marcas"); }}>
                 Nuestros Clientes
               </a>
             </li>
@@ -83,7 +83,7 @@ export const Navigation = () => {
               </Link>
             </li>*/}
             <li>
-              <a href="#contact" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("contact"); }}>
+              <a href="#contacto" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("contact"); }}>
                 Contacto
               </a>
             </li>

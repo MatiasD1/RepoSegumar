@@ -100,12 +100,12 @@ export const Contact = (props) => {
 
             </div>
           </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
+          <div id="footer" className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
               <h3>Nuestros datos</h3>
               <p>
                 <span>
-                  <i className="fa fa-map-marker"></i> Dirección
+                  <i className="fa fa-map-marker"></i>Dirección
                 </span>
                 {props.data ? props.data.address : "loading"}
               </p>
@@ -113,7 +113,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-phone"></i> Teléfono
+                  <i className="fa fa-phone"></i>Teléfono
                 </span>{" "}
                 {props.data ? props.data.phone : "loading"}
               </p>
@@ -121,39 +121,33 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-envelope-o"></i> Email
+                  <i className="fa fa-envelope-o"></i>Email
                 </span>{" "}
                 {props.data ? props.data.email : "loading"}
               </p>
             </div>
           </div>
           <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
       <div id="footer">
         <div className="container text-center">
+           <div className="social">
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/share/1P3fvzFNM7/?mibextid=wwXIfr" target="_blank">
+                      <img src="img/fb.png" alt="Facebook" className="redLogo" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/segumar_seguridad?igsh=YXd1bnNuMmhueHd4" target="_blank">
+                      <img src="img/ig.png" alt="Instagram" className="redLogo" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
           <p>
             &copy; 2025 Design by B-Logic{" "}
           </p>

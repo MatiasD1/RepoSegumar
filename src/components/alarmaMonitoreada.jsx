@@ -3,7 +3,7 @@ import React from "react";
 export const AlarmaMonitoreada = (props) => {
   return (
     <div>
-      <div className="encabezadoContainer">
+      <div className="encabezadoContainer" id="alarmaMonitoreada">
         <h1>Alarma Monitoreada</h1>
         <img src="img/AlarmaMonitoreadaS.png" className="TituloS" />
       </div>
