@@ -61,21 +61,26 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
             </div>
         </div>
         <div className="cotizarBotonContainer">
-  <h4>Obtené tu presupuesto personalizado sin costo</h4>
-  <button
-    className="cotizarBoton"
-    onClick={() => {
-      const url = 'https://wa.me/542236852201';
-      if (typeof window !== "undefined" && window.gtag_report_conversion) {
-        window.gtag_report_conversion(url);
-      }
-      // Fallback en caso de que gtag no esté disponible
-      window.open(url, '_blank');
-    }}
-  >
-    COTIZAR
-  </button>
-</div>
+          <h4>Obtené tu presupuesto personalizado sin costo</h4>
+          <button
+          className="cotizarBoton"
+          onClick={() => {
+            const url = 'https://wa.me/542236852201';
+
+            // Llama a gtag sin pasarle la URL
+            if (typeof window !== "undefined" && window.gtag_report_conversion) {
+              window.gtag_report_conversion(); // No redirige si no le das un URL
+            }
+
+            // Abre WhatsApp en nueva pestaña
+            window.open(url, '_blank');
+          }}
+        >
+          COTIZAR
+        </button>
+
+
+        </div>
   
     </>
   );

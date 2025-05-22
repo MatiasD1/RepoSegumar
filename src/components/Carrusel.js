@@ -115,7 +115,11 @@ const Carrusel = () => {
       <div className="formularioCarrusel">
         <p>
           <strong>Cotizá gratis tu alarma.</strong><br />
-          Llamá al <a className='formularioNumero' href="https://wa.me/542236852201">2236 85-2201</a><br />
+          Llamá al <a className='formularioNumero' 
+                      href="https://wa.me/542236852201" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+          >2236 85-2201</a><br />
           O dejá tus datos, nosotros te llamamos:
         </p>
 
