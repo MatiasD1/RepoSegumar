@@ -93,13 +93,14 @@ export const Navigation = () => {
         </div>
       </nav>
      <div className="whatsapp-bar">
+      <p className="whatsapp-bar-cotizar"><strong>COTIZAR</strong></p>
     <a
-      href="https://wa.me/5491123456789"
+      href="https://wa.me/542236852201"
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button2"
     >
-      📞 11 2345 6789
+      📞 2236 85-2201
     </a>
   </div>
   </>

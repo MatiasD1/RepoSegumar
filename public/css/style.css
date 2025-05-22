@@ -222,17 +222,30 @@ hr {
 /* Solo visible en móviles */
 @media (max-width: 767px) {
   .whatsapp-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alineación vertical */
+    gap: 10px; /* Espacio entre el texto y el botón */
     background-color: #fafafa;
     text-align: center;
     padding: 10px 0;
     width: 100%;
     position: fixed;
-    bottom: 0%; /* Altura del navbar (ajustala si es necesario) */
+    bottom: 0;
     z-index: 9998;
   }
-  .wpp{
+
+  .whatsapp-bar-cotizar {
+    font-size: 20px;
+    color: #ff0116;
+    margin: 0; /* Evita espacios extra por margen */
+    font-family: "Swiss 721", sans-serif;    
+  }
+
+  .wpp {
     display: none;
   }
+
   .whatsapp-button2 {
     color: white;
     font-weight: bold;
@@ -244,6 +257,7 @@ hr {
     display: inline-block;
   }
 }
+
 
 /* En pantallas grandes no se muestra */
 @media (min-width: 768px) {
@@ -363,7 +377,12 @@ a:focus,
   max-width: 95%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
-
+.formularioNumero{
+  color: #ff0116;
+}
+.formularioNumero:hover{
+  color:#cc0012;
+}
 .formularioCarrusel strong{
   color: #fff;
   font-size: 20px;
@@ -375,7 +394,12 @@ a:focus,
   gap: 10px;
   margin-top: 10px;
 }
-
+.formCarruselPolitica{
+  color: #ff0116;
+}
+.formCarruselPolitica:hover{
+  color: #cc0012;
+}
 .formCarrusel-input,
 .formCarrusel-select,
 .formCarrusel-phoneInput {
@@ -457,8 +481,8 @@ a:focus,
 }
 
 .formCarrusel-button {
-  background-color: #ffc107;
-  color: #000;
+  background-color: #ff0116;
+  color: #fafafa;
   border: none;
   padding: 8px 16px;
   font-weight: bold;
@@ -468,7 +492,7 @@ a:focus,
 }
 
 .formCarrusel-button:hover {
-  background-color: #e0a800;
+  background-color: #cc0012;
 }
 
 
@@ -507,26 +531,81 @@ a:focus,
   .imgCarrusel {
     object-fit: cover; 
   }
+   .formularioCarrusel {
+    margin-top: -355px;
+    bottom: 20px;
+    padding: 14px 16px;
+    font-size: 14px;
+    width: 80%;
+    left: 45%;
+    transform: translateX(-50%);
+  }
+
+  .formCarrusel-input,
+  .formCarrusel-codigoNum,
+  .formCarrusel-prefixedInput {
+    width: 110px;
+  }
+
+  .formCarrusel-button {
+    padding: 8px 12px;
+  }
 }
 
 @media (max-width: 767px) {
   .mySwiper {
-    height: 100vh; 
+    height: auto; /* ✅ esto permite que el contenido (como el formulario) empuje al siguiente componente */
+    min-height: 100vh;  
   }
 
-  .formularioCarrusel {
-    bottom: 10px;
-    right: 10px;
-    font-size: 12px;
+   .formularioCarrusel {
+    position: relative !important;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    left: 50%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 16px 14px;
+    box-shadow: none;
   }
 
-  .formHorizontal input[type="text"] {
+  .formCarrusel-horizontal {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .formCarrusel-input,
+  .formCarrusel-codigoNum,
+  .formCarrusel-prefixedInput {
     width: 100%;
   }
 
-  .formHorizontal {
+  .formCarrusel-telefono {
     flex-direction: column;
+    gap: 8px;
   }
+
+  .formCarrusel-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .formCarrusel-checkbox {
+    font-size: 12px;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .swiper-button-next:hover,
+.swiper-button-prev:hover {
+  display: none;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+ display: none;
+}
 }
 
 
@@ -655,6 +734,9 @@ header .intro-text {
 #about img {
   border-right: 0;
 }
+#about .textoAbout{
+  text-align: justify;
+}
 #about p {
   display: flex;
   text-align: center;
@@ -725,6 +807,14 @@ header .intro-text {
 }
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
   #about p {
     font-size: 1.6rem;
     text-align: center;
@@ -759,13 +849,38 @@ header .intro-text {
 
 /* Móviles */
 @media (max-width: 767px) {
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+#about .about-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center !important; /* Centra el contenido verticalmente */
+  text-align: center;
+}
+
+#about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+}
+
   #about {
     padding: 60px 15px 30px 15px;
   }
 
   #about h2, #about h3 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   #about p {
@@ -792,14 +907,8 @@ header .intro-text {
     align-items: center;
   }
 
-  #about .about-text {
-    padding: 10px;
-    text-align: center;
-  }
 
-  #about .anmacImg {
-    margin-top: 50px;
-  }
+
 }
 
 /* Services Section */
@@ -873,7 +982,7 @@ header .intro-text {
       }
 
       p {
-        font-size: 16px;
+        font-size: 2rem;
       }
 
   @media (max-width: 768px) {
@@ -973,43 +1082,52 @@ header .intro-text {
 /* Contenedor para las dos columnas */
 .AppContainer {
   display: flex;
+  align-items: center; /* Alinea verticalmente al tope */
+  background-color: rgba(128, 128, 128, 0.178);
+  flex-wrap: wrap;
 }
-.AppContainerReverse{
+
+.AppContainerReverse {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.178);
 }
-/* Estilos para la columna izquierda */
+
+/* Columna izquierda (texto) */
 .AppTexto {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Alinea texto a la izquierda */
   flex: 1;
   width: 60%;
-  padding: 2px 0px;
+  padding: 2rem 4rem; /* Más aire sin exagerar */
+  box-sizing: border-box;
+
 }
-.iconoServicios{
+
+.iconoServicios {
   width: 4rem;
 }
 
 .AppTitulo {
-  justify-content: center;
   font-size: 2rem;
   color: #333333;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .AppParrafo {
-  text-align: center;
-  padding: 2px 14rem;
+  text-align: justify;
+  padding: 0;
   font-size: 2rem;
   color: #333333;
   line-height: 1.6;
   margin-bottom: 15px;
-
 }
 
-/* Estilos para la columna derecha (imagen) */
+/* Columna derecha (imagen) */
 .AppImgContainer {
   display: flex;
   position: relative;
@@ -1021,8 +1139,7 @@ header .intro-text {
   text-transform: uppercase;
 }
 
-.tituloApp{
- 
+.tituloApp {
   position: absolute;
   font-size: 6.5rem;
   top: 30%;
@@ -1030,29 +1147,37 @@ header .intro-text {
   line-height: 1.4;
   text-shadow: 2px 2px 4px #000000;
 }
-.textoApp{
+
+.textoApp {
   font-size: 2rem;
-  padding: 4rem;
-  text-align: center;
+  padding: 1rem 0;
+  text-align: justify;
+  align-self: flex-start;
 }
+
 .AppImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
+
+/* Lista */
 .puteoApp {
-  list-style-type: disc;      /* tipo de viñeta */
+  list-style-type: disc;
   margin: 0;
-  padding-left: 1.5rem;       /* sangría para las viñetas */
-  line-height: 1.5;           /* espacio entre líneas */
-  color: #333;                /* color del texto */
+  padding: 0 4rem;
+  line-height: 1.5;
+  color: #333;
 }
 
 .puteoApp li {
-  margin-bottom: 0.5rem;      /* espacio entre ítems */
+  margin-bottom: 0.5rem;
   text-align: start;
+  font-size: 2rem;
 }
+
+
 /* ===== Tablet (768px–1024px) ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
   .AppContainer,
@@ -1062,11 +1187,11 @@ header .intro-text {
 
   .AppTexto {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .textoApp {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 2rem 1rem;
   }
 
@@ -1107,16 +1232,16 @@ header .intro-text {
 @media (max-width: 767px) {
   .AppContainer,
   .AppContainerReverse {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .AppTexto {
     width: 100%;
-    padding: 0.5rem;
+    padding: 2rem;
   }
 
   .textoApp {
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 1.5rem 0.5rem;
   }
 
@@ -1125,8 +1250,9 @@ header .intro-text {
   }
 
   .puteoApp li {
+    margin-left: 2rem;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .AppImgContainer {
@@ -1199,6 +1325,7 @@ header .intro-text {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 2rem;
   background-color: #0A057D;
   color: #FAFAFA;
   padding-bottom: 15px;
@@ -1206,6 +1333,7 @@ header .intro-text {
 .cotizarBoton {
   display: inline-block;
   padding: 1.5rem 2rem;
+  font-size: 2rem;
   background-color: #ff0116;
   color: #FAFAFA;
   text-decoration: none;
@@ -1463,6 +1591,15 @@ label {
 #contact .half-width {
   flex: 1;
 }
+.success {
+  color: #25d366;
+  margin-top: 10px;
+}
+.error {
+  color: #ff0116;
+  margin-top: 10px;
+}
+
 /* Footer Section*/
 #footer {
   background: #f6f6f6;

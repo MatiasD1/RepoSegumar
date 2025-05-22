@@ -8,7 +8,10 @@ const initialState = {
   message: "",
 };
 export const Contact = (props) => {
+  
   const [{ name, email, message }, setState] = useState(initialState);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,14 +33,17 @@ export const Contact = (props) => {
     emailjs
       .sendForm("service_pfegfbb", "template_xqjuas7", e.target, "eT_lyfkkg2ZsiG33P")
       .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      (result) => {
+        console.log(result.text);
+        setSuccessMessage("Mensaje enviado con éxito.");
+        e.target.reset();
+        clearState();
+      },
+      (error) => {
+        console.log(error.text);
+        setErrorMessage("Error al enviar el mensaje. Inténtalo nuevamente.");
+      }
+    );
   };
   return (
     <div>
@@ -88,6 +94,8 @@ export const Contact = (props) => {
                   ></textarea>
                 </div>
                 <button type="submit" className="btn btn-custom btn-lg">Enviar Mensaje</button>
+                {successMessage && <p className="success">{successMessage}</p>}
+                {errorMessage && <p className="error">{errorMessage}</p>}
               </form>
 
             </div>
