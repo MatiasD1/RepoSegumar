@@ -817,6 +817,15 @@ header .intro-text {
 #about img {
   border-right: 0;
 }
+#about .img-responsive {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* mantiene proporción 540x405 */
+  object-fit: cover;   /* recorta la imagen si es necesario para que llene el espacio */
+  display: block;
+}
+
+
 #about .textoAbout{
   text-align: justify;
 }
@@ -829,7 +838,7 @@ header .intro-text {
   width: 100%;
 }
 #about .mb-5 {
-  margin-bottom: 3rem;
+  margin-bottom: 4vw;
 }
 
 #about .about-text {
@@ -1547,7 +1556,7 @@ transition: background-color 0.3s ease, color 0.3s ease;
 }
 #contact h3 {
   color: #fff;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 25px;
   padding-bottom: 20px;
   font-weight: 400;
