@@ -28,7 +28,7 @@ h3 {
   color: #333;
 }
 h4 {
-  font-size: 18px;
+  font-size: 2.5rem;
   color: #333;
   font-weight: 600;
 }
@@ -347,10 +347,95 @@ a:focus,
   object-fit: cover;
 }
 
+.promo-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #ff0000;
+  color: white;
+  text-align: center;
+  padding: 2vw 1.5vw;
+  font-family: 'Gotham Pro', sans-serif;
+  z-index: 1;
+  width: 28vw;
+  max-width: 90%;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.promo-top {
+  font-size: 5vw;
+  margin: 0;
+  font-weight: bold;
+}
+
+.promo-porcentaje {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.big {
+  font-size: 10vw;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.percent-off {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+  line-height: 1;
+  margin-bottom: 1.5vw;
+}
+
+.percent {
+  font-size: 3vw;
+  margin-bottom: 0.5vw;
+}
+
+.off {
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.instalacion {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin: 1vw 0;
+}
+
+.extra {
+  font-size: 1.5vw;
+  margin: 2vw 0;
+}
+
+.promo-button {
+  background-color: white;
+  color: #ff0000;
+  border: none;
+  padding: 1vw 2vw;
+  font-size: 2vw;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: #ffe6e6;
+}
+
 .formularioCarrusel {
   position: absolute;
   bottom: 20px;
-  right: 120px;
+  left: 90px;
   background-color: #00000085;
   color: #fff;
   padding: 16px 20px;
@@ -487,7 +572,9 @@ a:focus,
   border-radius: 50%;
   width: auto !important;
   height: auto !important;
+  z-index: 999999;
   transition: color 0.3s ease;
+  display: none;
 }
 
 :root {
@@ -533,6 +620,9 @@ a:focus,
 
   .formCarrusel-button {
     padding: 8px 12px;
+  }
+  .promo-container{
+    display: none;
   }
 }
 
@@ -1026,7 +1116,6 @@ header .intro-text {
 /* Contenedor principal */
 .containerSF {
   width: 100%;
-  padding: 0px 0px 50px 0px;
   background-color: #f9f9f9;  /* Color de fondo suave */
 }
 
@@ -1120,7 +1209,7 @@ header .intro-text {
 
 .textoApp {
   font-size: 2rem;
-  padding: 1rem 0;
+  padding: 1rem 6rem;
   text-align: justify;
   align-self: flex-start;
 }
@@ -1136,7 +1225,7 @@ header .intro-text {
 .puteoApp {
   list-style-type: disc;
   margin: 0;
-  padding: 0 4rem;
+  padding: 2rem 8rem;
   line-height: 1.5;
   color: #333;
 }
@@ -1259,7 +1348,7 @@ header .intro-text {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: linear-gradient(135deg, #fafafa, #fafafad3); /* Fondo opcional oscuro */
   margin: 0px 4rem;
 }

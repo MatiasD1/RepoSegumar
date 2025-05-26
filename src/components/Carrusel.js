@@ -8,20 +8,19 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const imagesDesktop = [
-  "img/Slide1Escritorio.png",
+  "img/SegumarD.jpg",
   "img/Slide2Escritorio.png",
-  "img/Slide3Escritorio.png",
 ];
 
 const imagesTablet = [
-  "img/Slide1Tablet.png",
-  "img/Slide2Tablet.png",
+  "img/SegumarI.jpg",
   "img/Slide3Tablet.png",
+  {/*"img/Slide1Tablet.png",*/}
 ];
 
 const imagesMobile = [
   "img/Slide1Movil.png",
-  "img/Slide2Movil.png",
+  "img/SegumarM.png",
   "img/Slide3Movil.png",
 ];
 
@@ -111,6 +110,26 @@ const Carrusel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+       <div className="promo-container">
+          <div className="promo-text">
+            <p className="promo-top">PROMO</p>
+            <p className="promo-porcentaje">
+              <span className="big">50</span>
+              <span className="percent-off">
+                <span className="percent">%</span>
+                <span className="off">OFF</span>
+              </span>
+            </p>
+
+
+            <p className="instalacion">INSTALACIÓN</p>
+            <p className="extra">
+              + <span>2 MESES DE MONITOREO </span><span> SIN CARGO</span>
+            </p>
+            <button className="promo-button">Solicitar Promo</button>
+          </div>
+        </div>
 
       <div className="formularioCarrusel">
         <p>
