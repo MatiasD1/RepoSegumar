@@ -25,6 +25,7 @@ const imagesMobile = [
 ];
 
 const Carrusel = () => {
+  
   const [images, setImages] = useState(imagesDesktop);
 
   // Estados del formulario
@@ -35,7 +36,9 @@ const Carrusel = () => {
   const [mensaje, setMensaje] = useState('');
   const [error, setError] = useState('');
 
-   const form = useRef();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const form = useRef();
 
   useEffect(() => {
     const updateImages = () => {
@@ -60,9 +63,19 @@ const Carrusel = () => {
     e.preventDefault();
 
     // Dispara el evento de conversión de Google Ads
-    if (window.gtag_report_conversion) {
-        window.gtag_report_conversion();
-    }
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        if (window.gtag_report_conversion) {
+          window.gtag_report_conversion();
+        }
+        window.open("https://wa.me/2234554387", "_blank");
+      }}
+      className="promo-button"
+    >
+      Solicitar Promo
+    </a>
 
     if (!nombre || !telefono || !codigo || !aceptaPolitica) {
       setError('Por favor, completá todos los campos y aceptá la política.');
@@ -98,11 +111,15 @@ const Carrusel = () => {
       <Swiper
         spaceBetween={30}
         effect="fade"
-        navigation
+        
         loop={true}
-        modules={[EffectFade, Navigation, Pagination, Autoplay]}
+        modules={[EffectFade, Pagination, Autoplay]}
         className="mySwiper"
         autoplay={{ delay: 4000, disableOnInteraction: false }}
+        onSlideChange={(swiper) => {
+          // Como `loop` está activo, usamos realIndex en lugar de activeIndex
+          setActiveIndex(swiper.realIndex);
+        }}
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
@@ -111,25 +128,32 @@ const Carrusel = () => {
         ))}
       </Swiper>
 
-       <div className="promo-container">
-          <div className="promo-text">
-            <p className="promo-top">PROMO</p>
-            <p className="promo-porcentaje">
-              <span className="big">50</span>
-              <span className="percent-off">
-                <span className="percent">%</span>
-                <span className="off">OFF</span>
-              </span>
-            </p>
+      <div
+  className="promo-container"
+  style={{ opacity: activeIndex === 0 ? 1 : 0, pointerEvents: activeIndex === 0 ? 'auto' : 'none' }}
+>
+  <div className="promo-text">
+    <p className="promo-top">PROMO</p>
+    <p className="promo-porcentaje">
+      <span className="big">50</span>
+      <span className="percent-off">
+        <span className="percent">%</span>
+        <span className="off">OFF</span>
+      </span>
+    </p>
+    <p className="instalacion">INSTALACIÓN</p>
+    <p className="extra">+ 2 MESES DE MONITOREO<br />SIN CARGO</p>
+    <a
+      href="https://wa.me/2236852201"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="promo-button"
+    >
+      Solicitar Promo
+    </a>
+  </div>
+</div>
 
-
-            <p className="instalacion">INSTALACIÓN</p>
-            <p className="extra">
-              + <span>2 MESES DE MONITOREO </span><span> SIN CARGO</span>
-            </p>
-            <button className="promo-button">Solicitar Promo</button>
-          </div>
-        </div>
 
       <div className="formularioCarrusel">
         <p>

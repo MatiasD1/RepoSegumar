@@ -355,7 +355,7 @@ a:focus,
   top: 0;
   right: 0;
   height: 100%;
-  background-color: #ff0000;
+  background-color: #ff0116;
   color: white;
   text-align: center;
   padding: 2vw 1.5vw;
@@ -365,6 +365,7 @@ a:focus,
   max-width: 90%;
   min-width: 250px;
   box-sizing: border-box;
+  transition: opacity 0.5s ease;
 }
 
 .promo-top {
@@ -379,6 +380,7 @@ a:focus,
   justify-content: center;
   margin: 0;
   flex-wrap: wrap;
+  font-weight: bold;
 }
 
 .big {
@@ -418,10 +420,10 @@ a:focus,
 
 .promo-button {
   background-color: white;
-  color: #ff0000;
+  color: #ff0116 !important;
   border: none;
   padding: 1vw 2vw;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
@@ -430,6 +432,7 @@ a:focus,
 
 .promo-button:hover {
   background-color: #ffe6e6;
+  color: #ff0116;
 }
 
 .formularioCarrusel {

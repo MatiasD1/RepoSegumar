@@ -5,6 +5,8 @@ Verde: #C3FF26
 Azul: #0A057D
 Negro: #333333
 
+"homepage": "https://matiasd1.github.io/RepoSegumar/",
+
 Elemento		Color sugerido
 Logo y branding		Rojo y blanco
 Botón principal		Rojo con texto blanco
