@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const imagesDesktop = [
-  "img/SegumarD.jpg",
+  "img/SegumarD.png",
   "img/Slide2Escritorio.png",
 ];
 
@@ -20,8 +20,7 @@ const imagesTablet = [
 
 const imagesMobile = [
   "img/Slide1Movil.png",
-  "img/SegumarM.png",
-  "img/Slide3Movil.png",
+  "img/PROMO50.png",
 ];
 
 const Carrusel = () => {
@@ -129,30 +128,30 @@ const Carrusel = () => {
       </Swiper>
 
       <div
-  className="promo-container"
-  style={{ opacity: activeIndex === 0 ? 1 : 0, pointerEvents: activeIndex === 0 ? 'auto' : 'none' }}
->
-  <div className="promo-text">
-    <p className="promo-top">PROMO</p>
-    <p className="promo-porcentaje">
-      <span className="big">50</span>
-      <span className="percent-off">
-        <span className="percent">%</span>
-        <span className="off">OFF</span>
-      </span>
-    </p>
-    <p className="instalacion">INSTALACIÓN</p>
-    <p className="extra">+ 2 MESES DE MONITOREO<br />SIN CARGO</p>
-    <a
-      href="https://wa.me/2236852201"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="promo-button"
-    >
-      Solicitar Promo
-    </a>
-  </div>
-</div>
+        className="promo-container"
+        style={{ opacity: activeIndex === 0 ? 1 : 0, pointerEvents: activeIndex === 0 ? 'auto' : 'none' }}
+      >
+        <div className="promo-text">
+          <p className="promo-top">PROMO</p>
+          <p className="promo-porcentaje">
+            <span className="big">50</span>
+            <span className="percent-off">
+              <span className="percent">%</span>
+              <span className="off">OFF</span>
+            </span>
+          </p>
+          <p className="instalacion">INSTALACIÓN</p>
+          <p className="extra">+ 2 MESES DE MONITOREO<br />SIN CARGO</p>
+          <a
+            href="https://wa.me/2236852201"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="promo-button"
+          >
+            Solicitar Promo
+          </a>
+        </div>
+      </div>
 
 
       <div className="formularioCarrusel">

@@ -70,6 +70,9 @@ Gotham Pro - 100 px - 150 px - Regular - Medium
 Usar otra foto del carrusel para poner la frase, que la de la radio quede solo con Segumar. 
 Mejorar calidad de imagen Cuenta con la autorización de
 Arreglar responsive del carrusel para Surface Duo
-Fotos de la empresa para #About 
 Cambiar foto de encabezado de Alarma Monitoreada
-SCROLLING
+En Mobile, pasar el form abajo del carrusel
+Animación para desplegar el navbar
+Poner sangría en salto de linea en punteo
+Mobile: Confían en nosotros agrandar título
+Estilo del borde del botón Cotizar en AppHogarSeguro

@@ -17,12 +17,12 @@ export const HogarSeguroApp = (props) => {
             {/*<h3 className="alarmaMonitoreadaTitulo">Seguridad Avanzada</h3>*/}
             <p className="textoApp">En SEGUMAR pensamos en todo, en tu seguridad y en tu bolsillo. Por eso creamos SEGURIDAD LOWCOST.
 Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén conectados y seguros las 24 hs.</p>         
-            <ul className="puteoApp">
-              <li>Un botón de pánico.</li>
-              <li>Un botón de emergencias médicas.</li>
-              <li>Un botón de emergencia de incendio.</li>
-              <li>Podrá chatear con nuestras operadoras.</li>
-              <li>Podrá enviar una imagen del lugar donde está ocurriendo la emergencia.</li>
+            <ul className="punteoApp">
+              <li><img src='/img/send.png' alt="" className="icono-li" /> Un botón de pánico.</li>
+              <li><img src='/img/send.png' alt="" className="icono-li" /> Un botón de emergencias médicas.</li>
+              <li><img src='/img/send.png' alt="" className="icono-li" /> Un botón de emergencia de incendio.</li>
+              <li><img src='/img/send.png' alt="" className="icono-li" /> Podrá chatear con nuestras operadoras.</li>
+              <li><img src='/img/send.png' alt="" className="icono-li" /> Podrá enviar una imagen del lugar donde está ocurriendo la emergencia.</li>
             </ul>
            
            
