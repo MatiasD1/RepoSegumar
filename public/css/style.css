@@ -8,7 +8,11 @@ html {
   overflow-x: hidden;
   object-fit: cover !important;
   margin: 0; /* para eliminar la franja blanca a la derecha del body*/
-  background-image: #FAFAFA !important;
+  background-image: url('/img/Fondo.png'); /* Ruta relativa */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
 }
 h2,
 h3,
@@ -804,10 +808,7 @@ header .intro-text {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 /* About Section */
-#about {
-  background-color: #FAFAFA;
-  padding: 0px 0 50px 0;
-}
+
 .franjas{
   width: 100%;
   margin: 0;
@@ -893,9 +894,16 @@ header .intro-text {
 #about .reason-item {
   margin-bottom: 10px;
   text-align: center;
-  background-color: #FAFAFA;
   flex-direction: column;
   justify-content: center;
+  backdrop-filter: blur(10px) !important;
+  flex: 1 1;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent; /* Importante para mantener el espacio */
+  transition: all 0.3s ease !important;
 }
 .razones-container {
   max-width: 1200px;
@@ -912,16 +920,6 @@ header .intro-text {
   margin-bottom: 30px;
 }
 
-.reason-item {
-  flex: 1 1 300px;
-  max-width: 350px;
-  background-color: #FAFAFA;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent; /* Importante para mantener el espacio */
-  transition: all 0.3s ease !important;
-}
 .reason-item:hover{
   border: 2px solid #ff0116;
 }
@@ -935,6 +933,8 @@ header .intro-text {
 #about .anmacImg{
   width: 100%;
   margin: 100px 0 0 0;
+  background-color: #fafafa;
+  padding-bottom: 30px;
 }
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -947,7 +947,7 @@ header .intro-text {
     text-align: center;
   }
   #about p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
     line-height: 1.6;
   }
@@ -1058,7 +1058,6 @@ header .intro-text {
 /* Services Section */
 #services {
   margin: 100px 0 0 0;
-  background-color: #FAFAFA;
   color: black;
 }
   #services .imagenTitulo{ /* Imagen queda mas chica que el 100% y pegada a la izquierda*/
@@ -1170,6 +1169,7 @@ header .intro-text {
     line-height: 1.2;
     padding: 0 1rem;        /* margen interior para que no pegue en bordes */
   }
+  
 }
 
 /* Móvil: hasta 767px */
@@ -1190,7 +1190,6 @@ header .intro-text {
 /* Contenedor principal */
 .containerSF {
   width: 100%;
-  background-color: #f9f9f9;  /* Color de fondo suave */
 }
 
 /* Estilo para el título de la sección */
@@ -1222,7 +1221,7 @@ header .intro-text {
   position: relative;
 }
 .AlarmaMonitoreadaTitulo{
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: #8d8d8d;
     font-weight: 600;
 }
@@ -1377,6 +1376,7 @@ header .intro-text {
 
 /* ===== Tablet (768px–1024px) ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
+  
   .AppContainer,
   .AppContainerReverse {
     flex-direction: column-reverse;
@@ -1434,6 +1434,12 @@ header .intro-text {
 
 /* ===== Móvil (≤767px) ===== */
 @media (max-width: 767px) {
+  .AlarmaMonitoreadaCuadro{
+    margin: 0px 15px;
+  }
+  .AlarmaMonitoreadaCuadro p{
+    font-size: 1.4rem;
+  }
   .AppContainer,
   .AppContainerReverse {
     flex-direction: column-reverse;
@@ -1444,7 +1450,7 @@ header .intro-text {
   }
 
   .textoApp {
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding: 1.5rem 0.5rem;
   }
 
@@ -1455,7 +1461,7 @@ header .intro-text {
   .punteoApp li {
     margin-left: 2rem;
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .AppImgContainer {
@@ -1494,12 +1500,10 @@ header .intro-text {
   justify-content: center;
   gap: 30px;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #fafafa, #fafafad3); /* Fondo opcional oscuro */
   margin: 0px 4rem;
 }
 
 .seguridadFisicaCuadro {
-  background: #FAFAFA;
   backdrop-filter: blur(10px);
   border: 1px solid #fafafa1f;
   padding: 30px 20px;
@@ -1518,7 +1522,7 @@ header .intro-text {
 
 .cotizarBotonContainer {
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
   background: linear-gradient(135deg, #0A057D, #0f079e);
   text-align: center;
   display: flex;
@@ -1527,11 +1531,11 @@ header .intro-text {
 }
 
 .cotizarBotonContainer h4 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #ffffff;
   font-weight: bold;
-  max-width: 700px;
+  max-width: 800px;
   text-transform: uppercase;
 }
 
@@ -1540,7 +1544,7 @@ header .intro-text {
   color: #fff;
   border: none;
   padding: 0.75rem 2rem;
-  font-size: 1.4rem;
+  font-size: 2rem;
   border-radius: 30px;
   cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease;
@@ -1566,8 +1570,19 @@ header .intro-text {
 }
 
 @media (max-width: 767px) {
-  .seguridadFisicaCuadro {
+
+  h4{
+    font-size: 2rem;
+  }
+  .seguridadFisicaContainer {
+    margin: 0px 15px;
+  }
+  .seguridadFisicaCuadro h4{
     width: 100%; /* También una por fila en móviles */
+    font-size: 2rem;
+  }
+  .seguridadFisicaCuadro p{
+    font-size: 1.4rem; 
   }
 
   .alarmaMonitoreadaParrafo {
@@ -1657,7 +1672,6 @@ header .intro-text {
   background: rgba(10, 5, 125);/*linear-gradient(to right, rgba(10, 5, 125) 0%, rgb(20, 9, 231) 100%);*/
   color: rgba(255, 255, 255, 0.75);
   width: 100%;
-  margin-top: 20px;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -1872,7 +1886,7 @@ label {
     font-size: 3rem;
   }
   #contact .section-title p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-align: justify;
   }
  #footer p {
