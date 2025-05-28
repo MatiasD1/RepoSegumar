@@ -67,12 +67,33 @@ photopea.com
 
 Gotham Pro - 100 px - 150 px - Regular - Medium 
 
-Usar otra foto del carrusel para poner la frase, que la de la radio quede solo con Segumar. 
+Desktop
+
+- Definir y unificar tamaño fuentes
+- Ralentizar animacion razones
+- Cambiar foto de encabezado de Alarma Monitoreada
+- Cambiar diseño de Alarma Monitoreada
+- Fuente del texto de Cotizar
+- Estilo del borde del botón Cotizar en AppHogarSeguro
+- Poner sangría en salto de linea en punteo
+
+Tablets
+
+- Definir y unificar tamaño fuentes
+- Razones 2x3 
+
+Mobile
+
+- Definir y unificar tamaño fuentes
+- Razones 2x3
+- Titulo de Confian en Nosotros
+
+Futuro 
+
 Mejorar calidad de imagen Cuenta con la autorización de
-Arreglar responsive del carrusel para Surface Duo
-Cambiar foto de encabezado de Alarma Monitoreada
+Tablet: Tamaño fuente navbar
+Agregar una foto más a carruseles
 En Mobile, pasar el form abajo del carrusel
 Animación para desplegar el navbar
-Poner sangría en salto de linea en punteo
-Mobile: Confían en nosotros agrandar título
-Estilo del borde del botón Cotizar en AppHogarSeguro
+
+

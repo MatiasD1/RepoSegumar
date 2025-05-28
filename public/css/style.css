@@ -8,7 +8,7 @@ html {
   overflow-x: hidden;
   object-fit: cover !important;
   margin: 0; /* para eliminar la franja blanca a la derecha del body*/
-  background-color: #FAFAFA !important;
+  background-image: #FAFAFA !important;
 }
 h2,
 h3,
@@ -28,7 +28,7 @@ h3 {
   color: #333;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #333;
   font-weight: 600;
 }
@@ -38,6 +38,7 @@ h5 {
 }
 p {
   font-size: 18px;
+  line-height: 1.5;
 }
 p.intro {
   margin: 12px 0 0;
@@ -1016,7 +1017,7 @@ header .intro-text {
 }
 
   #about {
-    padding: 60px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
   }
 
   #about h2, #about h3 {
@@ -1158,7 +1159,6 @@ header .intro-text {
   font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
@@ -1211,6 +1211,61 @@ header .intro-text {
   max-width: 800px;
   margin: 0 auto;
 }
+/* ALARMA MONITOREADA */
+.AlarmaMonitoreadaContainer {
+  background: linear-gradient(135deg, #0d0d0d, #1f1f1f);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  position: relative;
+}
+.AlarmaMonitoreadaTitulo{
+    font-size: 2.3rem;
+    color: #8d8d8d;
+    font-weight: 600;
+}
+.AlarmaMonitoreadaCuadro {
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.AlarmaMonitoreadaCuadro:hover {
+  transform: translateY(-10px);
+}
+
+.AlarmaMonitoreadaCuadro.large {
+  flex: 1 1 100%;
+  max-width: 700px;
+}
+
+.icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 1rem;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconoServiciosAM {
+  width: 30px;
+  height: auto;
+}
+
 /* APP HOGAR SEGURO */
 /* Contenedor para las dos columnas */
 .AppContainer {
@@ -1218,6 +1273,8 @@ header .intro-text {
   align-items: center; /* Alinea verticalmente al tope */
   background-color: rgba(128, 128, 128, 0.178);
   flex-wrap: wrap;
+  border-top: 6px solid #ff0116;
+  border-bottom: 6px solid #ff0116;
 }
 
 .AppContainerReverse {
@@ -1305,9 +1362,11 @@ header .intro-text {
 }
 
 .punteoApp li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   text-align: start;
   font-size: 2rem;
+  padding-left: 1.5em; /* o el valor que desees */
+  text-indent: -1.5em;
 }
 .icono-li {
       width: 20px;
@@ -1457,41 +1516,48 @@ header .intro-text {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
-.cotizarBotonContainer{
+.cotizarBotonContainer {
+  width: 100%;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #0A057D, #0f079e);
+  text-align: center;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  background-color: #0A057D;
-  padding: 40px;
-}
-.cotizarBotonContainer h4{
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-size: 2rem;
-  background-color: #0A057D;
-  color: #FAFAFA;
-  padding-bottom: 15px;
 }
+
+.cotizarBotonContainer h4 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  max-width: 700px;
+  text-transform: uppercase;
+}
+
 .cotizarBoton {
-  display: inline-block;
-  padding: 1.5rem 2rem;
-  font-size: 2rem;
   background-color: #ff0116;
-  color: #FAFAFA;
-  text-decoration: none;
-  border-radius: 5px;
-  font-family: 'Gotham Pro';
-  font-weight: 700;
-transition: background-color 0.3s ease, color 0.3s ease;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cotizarBoton:hover {
-  background-color: #cc0012; /* tono más oscuro al hacer hover */
-  color: #ffffff;
+  transform: scale(1.08);
+  background-color: #ff0116; /* Podés dejarlo o cambiar el color si querés efecto distinto */
 }
+
+
+.cotizarBoton:active {
+  transform: scale(0.98);
+}
+
 /* Estilos de medios para pantallas pequeñas */
 @media (max-width: 1024px) {
   .seguridadFisicaCuadro {
@@ -1599,7 +1665,7 @@ transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
 }
 #contact .section-title p {
-  font-size: 18px;
+  font-size: 2rem;
   color: #fafafa;
   text-align: start;
 }
@@ -1778,7 +1844,7 @@ label {
 
 #footer p {
   color: #fafafa;
-  font-size: 14px;
+  font-size: 2rem;
   margin: 0;
 }
 
