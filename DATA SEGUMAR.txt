@@ -69,23 +69,14 @@ Gotham Pro - 100 px - 150 px - Regular - Medium
 
 Desktop
 
-- Definir y unificar tamaño fuentes
 - Ralentizar animacion razones
-- Cambiar foto de encabezado de Alarma Monitoreada
-- Cambiar diseño de Alarma Monitoreada
-- Fuente del texto de Cotizar
-- Estilo del borde del botón Cotizar en AppHogarSeguro
-- Poner sangría en salto de linea en punteo
 
 Tablets
 
-- Definir y unificar tamaño fuentes
-- Razones 2x3 
+- Titulo de Confian en Nosotros
 
 Mobile
 
-- Definir y unificar tamaño fuentes
-- Razones 2x3
 - Titulo de Confian en Nosotros
 
 Futuro 
