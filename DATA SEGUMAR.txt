@@ -69,15 +69,15 @@ Gotham Pro - 100 px - 150 px - Regular - Medium
 
 Desktop
 
+- Sgregar animaciones
 - Ralentizar animacion razones
 
 Tablets
 
-- Titulo de Confian en Nosotros
 
 Mobile
 
-- Titulo de Confian en Nosotros
+
 
 Futuro 
 

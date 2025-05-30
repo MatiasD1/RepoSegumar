@@ -1,9 +1,7 @@
 body,
 html {
-  font-family: "Gotham Pro", sans-serif;
-  
-  color: black;
-  font-weight: 400;
+  font-family: "Gotham Pro", sans-serif; 
+  font-weight: 600;
   box-sizing: border-box;
   overflow-x: hidden;
   object-fit: cover !important;
@@ -876,6 +874,7 @@ header .intro-text {
   line-height: 30px;
   margin: 20px 0;
   width: 100%;
+  font-weight: 600;
 }
 #about .mb-5 {
   margin-bottom: 4vw;
@@ -1296,7 +1295,6 @@ header .intro-text {
   align-items: flex-start; /* Alinea texto a la izquierda */
   flex: 1;
   width: 60%;
-  padding: 2rem 4rem; /* Más aire sin exagerar */
   box-sizing: border-box;
 
 }
@@ -1353,7 +1351,6 @@ header .intro-text {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px;
 }
 
 /* Lista */
@@ -1385,6 +1382,8 @@ header .intro-text {
   .AppContainer,
   .AppContainerReverse {
     flex-direction: column-reverse;
+    border-top: 0px;
+    border-bottom: 0px solid;
   }
 
   .AppTexto {
@@ -1448,6 +1447,8 @@ header .intro-text {
   .AppContainer,
   .AppContainerReverse {
     flex-direction: column-reverse;
+    border-top: 0px;
+    border-bottom: 0px solid;
   }
 
   .AppTexto {
@@ -1456,7 +1457,7 @@ header .intro-text {
 
   .textoApp {
     font-size: 1.4rem;
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 2rem;
   }
 
   .punteoApp {
@@ -1648,10 +1649,11 @@ header .intro-text {
 .marcas{
   background-color: #FAFAFA !important;
 }
-.marcas img{
+.imagenTitulo{
   width: 95%;
   display: block;
   margin: 0;
+  content: url('../img/SSconfian3.png');
 }
 .logo-container {
   display: flex;
@@ -1669,7 +1671,17 @@ header .intro-text {
   max-width: 100%;
   height: auto;
 }
+@media (max-width: 767px) {
 
+  .marcas{
+      padding-bottom: 2rem;
+  }
+  .imagenTitulo{
+      width: 100%;
+      content: url('../img/SSconfian3D.png');
+  }
+
+}
 
 /* Contact Section */
 #contact {
@@ -1677,6 +1689,7 @@ header .intro-text {
   background: rgba(10, 5, 125);/*linear-gradient(to right, rgba(10, 5, 125) 0%, rgb(20, 9, 231) 100%);*/
   color: rgba(255, 255, 255, 0.75);
   width: 100%;
+  font-weight: 400;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -1904,6 +1917,7 @@ label {
 
  #contact{
   margin-bottom: 0;
+  padding-top: 5rem;
  } 
       #contact .section-title h2 {
         font-size: 3rem;
