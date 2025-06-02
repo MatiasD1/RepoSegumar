@@ -154,7 +154,7 @@ const Carrusel = () => {
       </div>
 
 
-      <div className="formularioCarrusel">
+      <div className="formularioCarrusel" >
         <p>
           <strong>Cotizá gratis tu alarma.</strong><br />
           Llamá al <a className='formularioNumero' 

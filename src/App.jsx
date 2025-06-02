@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
+import Loader from "./components/loader";
 import { Navigation } from "./components/navigation";
 import Carrusel from "./components/Carrusel";
 import { Features } from "./components/features";
@@ -29,27 +30,37 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
+
  const [landingPageData, setLandingPageData] = useState({});
+ const [loading, setLoading] = useState(true); 
 
-  // Cargo datos de JSON
-  useEffect(() => {
+ useEffect(() => {
+  // Simula carga de datos
+  setTimeout(() => {
     setLandingPageData(JsonData);
-  }, []);
+    setLoading(false);
+  }, 1000);
+}, []);
 
-  // Inicializo AOS solo una vez
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 120,
-      once: true,
-      anchorPlacement: "top-bottom",
-    });
-  }, []);
-
-  // Refresca AOS tras cada render para recalcular posiciones
-  useEffect(() => {
-    AOS.refresh();
+// Inicializa AOS una sola vez
+useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    offset: 120,
+    once: true,
+    anchorPlacement: "top-bottom",
   });
+}, []);
+
+// Refresca AOS SOLO cuando el loading finaliza
+useEffect(() => {
+  if (!loading) {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 300); // Ajustá el delay si hace falta
+  }
+}, [loading]);
+
 
   const basename = process.env.NODE_ENV === "production"
   ? "/RepoSegumar"
@@ -112,6 +123,9 @@ const App = () => {
           };
         `}</script>
     </Helmet>
+     {loading ? (
+      <Loader />
+    ) : (
     <Router basename={basename}>
       <Navigation />
       <Carrusel />
@@ -139,8 +153,11 @@ const App = () => {
        {/*  <Route path="/page2" element={<Page2 data={landingPageData.About}/>} />*/}
       </Routes>
     </Router>
+      )}
   </>
+  
   );
+
 };
 
 export default App;

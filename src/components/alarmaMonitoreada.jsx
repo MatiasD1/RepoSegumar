@@ -24,7 +24,7 @@ export const AlarmaMonitoreada = (props) => {
             <p>Nunca más ingresarás solo a tu casa. Desde SEGUMAR estaremos cuidándote las 24 horas mediante las cámaras enlazadas a la central.</p>
           </div>
 
-          <div className="AlarmaMonitoreadaCuadro glass">
+          <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
             <div className="icon-wrapper">
               <img src="img/van.png" className="iconoServiciosAM" />
             </div>
@@ -32,7 +32,7 @@ export const AlarmaMonitoreada = (props) => {
             <p>El servicio de seguridad remota 2.0 es más barato que la seguridad física, ayudando a reducir costos de expensas.</p>
           </div>
 
-          <div className="AlarmaMonitoreadaCuadro glass large">
+          <div className="AlarmaMonitoreadaCuadro glass large" data-aos="zoom-in">
             <div className="icon-wrapper">
               <img src="img/ahorrar.png" className="iconoServiciosAM" />
             </div>
@@ -43,6 +43,27 @@ export const AlarmaMonitoreada = (props) => {
 
         
       </div>
+      <div className="cotizarBotonContainer">
+          <h4>Obtené tu presupuesto personalizado sin costo</h4>
+          <button
+          className="cotizarBoton"
+          onClick={() => {
+            const url = 'https://wa.me/542236852201';
+
+            // Llama a gtag sin pasarle la URL
+            if (typeof window !== "undefined" && window.gtag_report_conversion) {
+              window.gtag_report_conversion(); // No redirige si no le das un URL
+            }
+
+            // Abre WhatsApp en nueva pestaña
+            window.open(url, '_blank');
+            }}
+          >
+            COTIZAR
+          </button>
+
+
+        </div>
     </div>
   );
 };

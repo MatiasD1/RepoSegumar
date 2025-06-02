@@ -93,6 +93,31 @@ hr {
   background-color: #1ebd5a;
 }
 
+/* components/Loader.css */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.spinner {
+  border: 8px solid #fafafa;
+  border-top: 8px solid #ff0116;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Navigation */
 #menu {
   position: right;
@@ -900,7 +925,6 @@ header .intro-text {
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
-  transition: all 0.3s ease !important;
   flex-direction: column;
   justify-content: flex-start;
   backdrop-filter: blur(10px) !important;
@@ -926,6 +950,7 @@ header .intro-text {
 }
 .reason-item:hover{
   border: 2px solid #ff0116;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .reason-item i {
   font-size: 24px;
@@ -1285,6 +1310,7 @@ header .intro-text {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
+  border-bottom: 6px solid #ff0116;
   background-color: rgba(128, 128, 128, 0.178);
 }
 
@@ -1647,7 +1673,7 @@ header .intro-text {
 }
 /* Marcas Section */
 .marcas{
-  background-color: #FAFAFA !important;
+  background-color: #f8f8f8 !important;
 }
 .imagenTitulo{
   width: 95%;
@@ -1665,11 +1691,13 @@ header .intro-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 
-.logo-column img {
+.marca {
   max-width: 100%;
   height: auto;
+  transition: none;
 }
 @media (max-width: 767px) {
 
@@ -1877,6 +1905,7 @@ label {
 #footer p {
   color: #fafafa;
   font-size: 2rem;
+  font-weight: 200;
   margin: 0;
 }
 
