@@ -5,7 +5,7 @@ export const SeguridadFisica = (props) => {
     <div>
       <div className="encabezadoContainer" id="seguridadFisica">
         <h1 className="encabezadoSF">Seguridad Física</h1>
-        <img src="img/SeguridadFisicaS.png" className="TituloS" />
+        <img src="img/SeguridadFisica.png" className="TituloS" />
       </div>
       
       <div className="containerSF" >

@@ -5,7 +5,7 @@ export const AlarmaMonitoreada = (props) => {
     <div>
       <div className="encabezadoContainer" id="alarmaMonitoreada">
         <h1>Alarma Monitoreada</h1>
-        <img src="img/AlarmaMonitoreadaS.png" className="TituloS" />
+        <img src="img/AlarmaMonitoreada.png" className="TituloS" />
       </div>
       <div className="containerSF">
       {/*  <div className="section-title">

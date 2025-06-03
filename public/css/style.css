@@ -1525,7 +1525,9 @@ header .intro-text {
 }
 
 /* Seguridad Física */
-
+.AppHogarSeguroTitulo{
+  white-space: nowrap;
+}
 .seguridadFisicaContainer {
   display: flex;
   flex-wrap: wrap;
@@ -1560,6 +1562,7 @@ header .intro-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+      border-bottom: 6px solid #ff0116;
 }
 
 .cotizarBotonContainer h4 {

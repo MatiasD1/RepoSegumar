@@ -3,12 +3,11 @@ import React from "react";
 export const HogarSeguroApp = (props) => {
   return (
     <>
-        {/*<div className="section-title">
-          <h2>Seguridad Física</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.
-          </p>
-        </div>*/}
+           <div className="encabezadoContainer" id="alarmaMonitoreada">
+          <h1 className="AppHogarSeguroTitulo">APP<br/> HOGAR SEGURO</h1>
+          <img src="img/AppHogarSeguro2.png" className="TituloS" />
+        </div>
+    
         <div className="AppContainer" id="AppHogarSeguro">
           <div className="AppTexto" data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
@@ -30,7 +29,7 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
           </div>
 
           <div className="AppImgContainer" data-aos="fade-left">
-              <h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>
+          {/*   <h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>*/} 
             <img
               src="img/casa.png"
               alt="Imagen"
