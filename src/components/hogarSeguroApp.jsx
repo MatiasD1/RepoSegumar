@@ -4,14 +4,15 @@ export const HogarSeguroApp = (props) => {
   return (
     <>
            <div className="encabezadoContainer" id="alarmaMonitoreada">
-          <h1 className="AppHogarSeguroTitulo">APP<br/> HOGAR SEGURO</h1>
+          <h1 className="AppHogarSeguroTitulo" >APP<br/> HOGAR SEGURO</h1>
           <img src="img/AppHogarSeguro2.png" className="TituloS" />
         </div>
     
         <div className="AppContainer" id="AppHogarSeguro">
           <div className="AppTexto" data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
-      data-aos-delay="200"
+                      data-aos-duration="500"
+      data-aos-delay="400"
       data-aos-offset="0">
             {/*<h3 className="alarmaMonitoreadaTitulo">Seguridad Avanzada</h3>*/}
             <p className="textoApp">En SEGUMAR pensamos en todo, en tu seguridad y en tu bolsillo. Por eso creamos SEGURIDAD LOWCOST.
@@ -31,7 +32,7 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
           <div className="AppImgContainer" data-aos="fade-left">
           {/*   <h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>*/} 
             <img
-              src="img/casa.png"
+              src="img/AppHogarSeguro.png"
               alt="Imagen"
               className="AppImg"
             />
@@ -41,9 +42,10 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
         
          <div className="AppContainerReverse">
             <div className="AppTexto" data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="200"
-        data-aos-offset="0">
+                data-aos-easing="ease-in-back"
+                data-aos-duration="500"
+                data-aos-delay="400"
+                data-aos-offset="0">
               {/*<h3 className="alarmaMonitoreadaTitulo">Seguridad Avanzada</h3>*/}
               <p className="textoApp">A través del sistema de geolocalización podrá conocer donde esta cada uno de sus familiares. Esta herramienta es muy utilizada para conocer la ubicación de un familiar ante un evento de emergencia o ante el robo de un celular.<br/><br/>
               Con SEGUMAR HOGAR SEGURO, podrá indicar, si lo desea, quien quiere que sea su guardián. Esta función genera notificaciones a su celular ante un evento de peligro. De esta forma tanto la central de monitoreo como su GUARDIAN, podrá conocer cual es su situación.
@@ -53,7 +55,7 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
             <div className="AppImgContainer" data-aos="fade-right">
               {/*<h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>*/}
               <img
-                src="img/AppHogarSeguro.png"
+                src="img/monitoreo.png"
                 alt="Imagen"
                 className="AppImg"
               />

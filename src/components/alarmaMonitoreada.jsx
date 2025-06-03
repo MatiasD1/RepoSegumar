@@ -4,7 +4,7 @@ export const AlarmaMonitoreada = (props) => {
   return (
     <div>
       <div className="encabezadoContainer" id="alarmaMonitoreada">
-        <h1>Alarma Monitoreada</h1>
+        <h1 >Alarma Monitoreada</h1>
         <img src="img/AlarmaMonitoreada.png" className="TituloS" />
       </div>
       <div className="containerSF">
