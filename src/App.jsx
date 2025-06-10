@@ -62,9 +62,8 @@ useEffect(() => {
 }, [loading]);
 
 
-  const basename = process.env.NODE_ENV === "production"
-  ? "/RepoSegumar"
-  : "/";
+  const basename = "/";
+
 
   return (
     <>
@@ -126,7 +125,7 @@ useEffect(() => {
      {loading ? (
       <Loader />
     ) : (
-    <Router basename={basename}>
+    <Router basename="/">
       <Navigation />
       <Carrusel />
       <Routes>
