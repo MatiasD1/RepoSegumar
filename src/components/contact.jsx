@@ -138,12 +138,12 @@ export const Contact = (props) => {
                 <ul>
                   <li>
                     <a href="https://www.facebook.com/share/1P3fvzFNM7/?mibextid=wwXIfr" target="_blank">
-                      <img src="img/fb.png" alt="Facebook" className="redLogo" />
+                      <img src="/img/fb.png" alt="Facebook" className="redLogo" />
                     </a>
                   </li>
                   <li>
                     <a href="https://www.instagram.com/segumar_seguridad?igsh=YXd1bnNuMmhueHd4" target="_blank">
-                      <img src="img/ig.png" alt="Instagram" className="redLogo" />
+                      <img src="/img/ig.png" alt="Instagram" className="redLogo" />
                     </a>
                   </li>
                 </ul>
