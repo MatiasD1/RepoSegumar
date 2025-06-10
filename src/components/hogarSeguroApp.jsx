@@ -5,7 +5,7 @@ export const HogarSeguroApp = (props) => {
     <>
            <div className="encabezadoContainer" id="alarmaMonitoreada">
           <h1 className="AppHogarSeguroTitulo" >APP<br/> HOGAR SEGURO</h1>
-          <img src="img/AppHogarSeguro2.png" className="TituloS" />
+          <img src="/img/AppHogarSeguro2.png" className="TituloS" />
         </div>
     
         <div className="AppContainer" id="AppHogarSeguro">
@@ -32,7 +32,7 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
           <div className="AppImgContainer" data-aos="fade-left">
           {/*   <h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>*/} 
             <img
-              src="img/AppHogarSeguro.png"
+              src="/img/AppHogarSeguro.png"
               alt="Imagen"
               className="AppImg"
             />
@@ -55,7 +55,7 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
             <div className="AppImgContainer" data-aos="fade-right">
               {/*<h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>*/}
               <img
-                src="img/monitoreo.png"
+                src="/img/monitoreo.png"
                 alt="Imagen"
                 className="AppImg"
               />
