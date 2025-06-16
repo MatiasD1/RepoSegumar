@@ -20,8 +20,8 @@ export const AlarmaMonitoreada = (props) => {
             <div className="icon-wrapper">
               <img src="/img/cam.png" className="iconoServiciosAM" />
             </div>
-            <h4 className="AlarmaMonitoreadaTitulo">VIVÍ PROTEGIDO LAS 24HS</h4>
-            <p>Nunca más ingresarás solo a tu casa. Desde SEGUMAR estaremos cuidándote las 24 horas mediante las cámaras enlazadas a la central.</p>
+            <h4 className="AlarmaMonitoreadaTitulo">VIVÍ PROTEGIDO LAS 24 HS</h4>
+            <p>Disfrutá de tu hogar con tranquilidad. Nuestro sistema monitoreado te cuida en todo momento, estés o no estés.</p>
           </div>
 
           <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
@@ -29,7 +29,7 @@ export const AlarmaMonitoreada = (props) => {
               <img src="/img/van.png" className="iconoServiciosAM" />
             </div>
             <h4 className="AlarmaMonitoreadaTitulo">MÓVIL CON RESPUESTA INMEDIATA</h4>
-            <p>El servicio de seguridad remota 2.0 es más barato que la seguridad física, ayudando a reducir costos de expensas.</p>
+            <p>Ante cualquier alerta, nuestro móvil acude al instante para protegerte y actuar rápido frente a cualquier emergencia.</p>
           </div>
 
           <div className="AlarmaMonitoreadaCuadro glass large" data-aos="zoom-in">

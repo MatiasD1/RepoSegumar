@@ -11,6 +11,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+  line-height: 0 !important; /* SOLUCIONÓ LA LÍNEA DE ESPACIO BAJO LOS ENCABEZADOS DE LAS SECCIONES*/
 }
 h2,
 h3,
@@ -78,19 +79,25 @@ hr {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  width: 60px;
+  height: 60px;
   background-color: #25d366;
   color: white;
-  border-radius: 90%;
-  padding: 15px;
-  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
+
 .whatsapp-button:hover {
   transform: scale(1.1);
   background-color: #1ebd5a;
+  color: white;
 }
 
 /* components/Loader.css */
@@ -251,6 +258,7 @@ hr {
 
 /* ✅ En tablets (768px a 991px), mostrar menú normal */
 @media (min-width: 766px) and (max-width: 991px) {
+
   #menu {
     padding: 4px 0;
   }
@@ -294,6 +302,7 @@ hr {
 
 /* Solo visible en móviles */
 @media (max-width: 767px) {
+
   .whatsapp-bar {
     display: flex;
     justify-content: center;
@@ -1165,11 +1174,16 @@ header .intro-text {
   position: relative;
   width: 100%;
   display: inline-block;
+  padding: 0;
+   margin: 0;
+   overflow: hidden;
 }
 
 .TituloS {
   width: 100%;
   display: block;
+   margin: 0;
+   padding: 0;
 }
 
 .encabezadoSF {
@@ -1303,6 +1317,7 @@ header .intro-text {
   flex-wrap: wrap;
   border-top: 6px solid #ff0116;
   border-bottom: 6px solid #ff0116;
+   margin: 0;
 }
 
 .AppContainerReverse {
@@ -1355,6 +1370,7 @@ header .intro-text {
   font-family: "Swiss 721", sans-serif;
   color: #fafafa;
   text-transform: uppercase;
+   margin: 0;
 }
 
 .tituloApp {
@@ -1364,6 +1380,7 @@ header .intro-text {
   text-align: center;
   line-height: 1.4;
   text-shadow: 2px 2px 4px #000000;
+   margin: 0;
 }
 
 .textoApp {
@@ -1452,6 +1469,7 @@ header .intro-text {
   .cotizarBoton {
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
+
   }
   .punteoApp {
     list-style: none;
@@ -1459,6 +1477,7 @@ header .intro-text {
     padding: 2rem 4rem;
     line-height: 1.5;
     color: #333;
+
   }
 }
 
@@ -1562,7 +1581,8 @@ header .intro-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-      border-bottom: 6px solid #ff0116;
+  border-bottom: 6px solid #ff0116;
+  line-height: 2;
 }
 
 .cotizarBotonContainer h4 {
