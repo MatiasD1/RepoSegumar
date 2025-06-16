@@ -1345,10 +1345,11 @@ header .intro-text {
 }
 
 .AppTitulo {
-  font-size: 2rem;
-  color: #333333;
+  font-size: 27px;
+  color: #ff0116;
   margin-bottom: 10px;
   text-align: left;
+  padding: 1rem 6rem;
 }
 
 .AppParrafo {
@@ -1380,7 +1381,7 @@ header .intro-text {
   text-align: center;
   line-height: 1.4;
   text-shadow: 2px 2px 4px #000000;
-   margin: 0;
+  margin: 0;
 }
 
 .textoApp {
@@ -1400,23 +1401,24 @@ header .intro-text {
 .punteoApp {
   list-style: none;
   margin: 0;
-  padding: 2rem 8rem;
+  padding: 2rem 8rem 2rem 6rem;
   line-height: 1.5;
   color: #333;
 }
 
 .punteoApp li {
+  display: flex;
+  align-items: flex-start;
   margin-bottom: 2rem;
   text-align: start;
   font-size: 2rem;
-  padding-left: 1.5em; /* o el valor que desees */
-  text-indent: -1.5em;
+  gap: 1rem;
 }
 .icono-li {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-      flex-shrink: 0;
+      width: 25px;
+      height: 25px;
+      padding-right: 0px;
+      margin-top: 0.3rem;
 }
 
 /* ===== Tablet (768px–1024px) ===== */
@@ -1424,11 +1426,13 @@ header .intro-text {
   
   .AppContainer,
   .AppContainerReverse {
-    flex-direction: column-reverse;
     border-top: 0px;
     border-bottom: 0px solid;
   }
 
+  .AppTitulo {
+    padding: 1rem 3rem;
+  }
   .AppTexto {
     width: 100%;
     padding: 2rem 4rem;
@@ -1436,7 +1440,7 @@ header .intro-text {
 
   .textoApp {
     font-size: 2rem;
-    padding: 2rem 1rem;
+    padding: 2rem 4rem;
   }
 
   .punteoApp {
@@ -1491,13 +1495,17 @@ header .intro-text {
   }
   .AppContainer,
   .AppContainerReverse {
-    flex-direction: column-reverse;
     border-top: 0px;
     border-bottom: 0px solid;
   }
 
+  .AppTitulo {
+    font-size: 20px;
+    padding: 1rem 3rem;
+  }
   .AppTexto {
     width: 100%;
+    padding: 1.5rem 1rem;
   }
 
   .textoApp {

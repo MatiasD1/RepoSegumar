@@ -4,8 +4,8 @@ export const HogarSeguroApp = (props) => {
   return (
     <>
            <div className="encabezadoContainer" id="alarmaMonitoreada">
-          <h1 className="AppHogarSeguroTitulo" >APP<br/> HOGAR SEGURO</h1>
-          <img src="/img/AppHogarSeguro2.png" className="TituloS" />
+          <h1 className="AppHogarSeguroTitulo" >VIDEOVIGILANCIA<br/>INTELIGENTE</h1>
+          <img src="/img/AlarmaMonitoreada2.png" className="TituloS" />
         </div>
     
         <div className="AppContainer" id="AppHogarSeguro">
@@ -14,15 +14,14 @@ export const HogarSeguroApp = (props) => {
                       data-aos-duration="500"
       data-aos-delay="400"
       data-aos-offset="0">
-            {/*<h3 className="alarmaMonitoreadaTitulo">Seguridad Avanzada</h3>*/}
-            <p className="textoApp">En SEGUMAR pensamos en todo, en tu seguridad y en tu bolsillo. Por eso creamos SEGURIDAD LOWCOST.
-Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén conectados y seguros las 24 hs.</p>         
+            <h3 className="AppTitulo">Sistema de vigilancia para tu empresa o consorcio</h3>
+            {/*<p className="textoApp"></p>*/}
             <ul className="punteoApp">
-              <li><img src='/img/send.png' alt="" className="icono-li" /> Un botón de pánico.</li>
-              <li><img src='/img/send.png' alt="" className="icono-li" /> Un botón de emergencias médicas.</li>
-              <li><img src='/img/send.png' alt="" className="icono-li" /> Un botón de emergencia de incendio.</li>
-              <li><img src='/img/send.png' alt="" className="icono-li" /> Podrá chatear con nuestras operadoras.</li>
-              <li><img src='/img/send.png' alt="" className="icono-li" /> Podrá enviar una imagen del lugar donde está ocurriendo la emergencia.</li>
+              <li><img src='/img/1.png' alt="" className="icono-li" />Conectamos las cámaras del lugar a nuestra Central de Monitoreo 24/7.</li>
+              <li><img src='/img/2.png' alt="" className="icono-li" />Supervisamos en tiempo real todos los accesos y puntos clave del edificio o empresa.</li>
+              <li><img src='/img/3.png' alt="" className="icono-li" />Verificamos cada evento sospechoso y damos aviso inmediato.</li>
+              <li><img src='/img/4.png' alt="" className="icono-li" />Activamos protocolo de respuesta: enviamos móvil y/o alertamos a las fuerzas de seguridad.</li>
+              <li><img src='/img/5.png' alt="" className="icono-li" />Generamos informes y registros ante incidentes o requerimientos del cliente.</li>
             </ul>
            
            
@@ -32,7 +31,7 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
           <div className="AppImgContainer" data-aos="fade-left">
           {/*   <h1 className="tituloApp">App<br/>Hogar<br/>Seguro</h1>*/} 
             <img
-              src="/img/AppHogarSeguro.png"
+              src="/img/camaraV.jpg"
               alt="Imagen"
               className="AppImg"
             />
@@ -46,10 +45,15 @@ Adquirí un paquete de APP segumar Hogar seguro para que vos y tu familia estén
                 data-aos-duration="500"
                 data-aos-delay="400"
                 data-aos-offset="0">
-              {/*<h3 className="alarmaMonitoreadaTitulo">Seguridad Avanzada</h3>*/}
-              <p className="textoApp">A través del sistema de geolocalización podrá conocer donde esta cada uno de sus familiares. Esta herramienta es muy utilizada para conocer la ubicación de un familiar ante un evento de emergencia o ante el robo de un celular.<br/><br/>
-              Con SEGUMAR HOGAR SEGURO, podrá indicar, si lo desea, quien quiere que sea su guardián. Esta función genera notificaciones a su celular ante un evento de peligro. De esta forma tanto la central de monitoreo como su GUARDIAN, podrá conocer cual es su situación.
+              <h3 className="AppTitulo">¿A quién está dirigido y por qué elegirlo?</h3>
+              <p className="textoApp">Este servicio está diseñado para consorcios, edificios, empresas, industrias y comercios que requieren vigilancia profesional sin la necesidad de contar con un guardia en el lugar.
+                <br/>Es ideal para quienes buscan:
               </p>
+              <ul className="punteoApp">
+                <li><img src='/img/send.png' alt="" className="icono-li" />Reducir riesgos de intrusión, vandalismo o siniestros.</li>
+                <li><img src='/img/send.png' alt="" className="icono-li" />Contar con respaldo visual ante cualquier incidente.</li>
+                <li><img src='/img/send.png' alt="" className="icono-li" />Sumar una capa de seguridad efectiva sin asumir costos innecesarios.</li>
+              </ul>
             </div>
 
             <div className="AppImgContainer" data-aos="fade-right">
