@@ -87,4 +87,6 @@ Agregar una foto más a carruseles
 En Mobile, pasar el form abajo del carrusel
 Animación para desplegar el navbar
 
+- MENSAJE CUANDO SE ENVIA EL FORM DEL CARRUSEL y el de CONTACTO
+- Numero de telefono fijado en la parte inferior (mobile)
 
