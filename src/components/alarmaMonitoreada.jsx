@@ -5,7 +5,7 @@ export const AlarmaMonitoreada = (props) => {
     <div>
       <div className="encabezadoContainer" id="alarmaMonitoreada">
         <h1 >Alarma Monitoreada</h1>
-        <img src="/img/casa.png" className="TituloS" />
+        <img src="/img/casa.png" className="TituloS" alt="Casa moderna de noche" />
       </div>
       <div className="containerSF">
       {/*  <div className="section-title">
@@ -18,7 +18,7 @@ export const AlarmaMonitoreada = (props) => {
       <div className="AlarmaMonitoreadaContainer">
           <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
             <div className="icon-wrapper">
-              <img src="/img/cam.png" className="iconoServiciosAM" />
+              <img src="/img/cam.png" className="iconoServiciosAM" alt="Icono de cámara de vigilancia"/>
             </div>
             <h4 className="AlarmaMonitoreadaTitulo">VIVÍ PROTEGIDO LAS 24 HS</h4>
             <p>Disfrutá de tu hogar con tranquilidad. Nuestro sistema monitoreado te cuida en todo momento, estés o no estés.</p>
@@ -26,7 +26,7 @@ export const AlarmaMonitoreada = (props) => {
 
           <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
             <div className="icon-wrapper">
-              <img src="/img/van.png" className="iconoServiciosAM" />
+              <img src="/img/van.png" className="iconoServiciosAM" alt="Icono de camioneta"/>
             </div>
             <h4 className="AlarmaMonitoreadaTitulo">MÓVIL CON RESPUESTA INMEDIATA</h4>
             <p>Ante cualquier alerta, nuestro móvil acude al instante para protegerte y actuar rápido frente a cualquier emergencia.</p>
@@ -34,7 +34,7 @@ export const AlarmaMonitoreada = (props) => {
 
           <div className="AlarmaMonitoreadaCuadro glass large" data-aos="zoom-in">
             <div className="icon-wrapper">
-              <img src="/img/ahorrar.png" className="iconoServiciosAM" />
+              <img src="/img/ahorrar.png" className="iconoServiciosAM" alt="Icono de signo peso"/>
             </div>
             <h4 className="AlarmaMonitoreadaTitulo">AHORRÁ CON NUESTROS KITS EN COMODATO</h4>
             <p>Protegé tu hogar sin gran inversión inicial. Sólo abonás la instalación y disfrutás de tranquilidad con sensores y comunicadores GPRS.</p>

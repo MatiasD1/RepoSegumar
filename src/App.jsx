@@ -57,7 +57,7 @@ useEffect(() => {
   if (!loading) {
     setTimeout(() => {
       AOS.refresh();
-    }, 300); // Ajustá el delay si hace falta
+    }, 300); // Ajusta el delay si hace falta
   }
 }, [loading]);
 

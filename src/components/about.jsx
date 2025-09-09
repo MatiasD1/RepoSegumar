@@ -10,7 +10,7 @@ export const About = (props) => {
         {/* Fila superior */}
           <div className="row align-items-center mb-5" data-aos="fade-right">
             <div className="col-xs-12 col-md-6">
-              <img src="/img/vaso.jpg" className="img-responsive" alt="Nosotros" />
+              <img src="/img/vaso.jpg" className="img-responsive" alt="Logo de Segumar en taza corporativa" />
             </div>
             <div className="col-xs-12 col-md-6">
               
@@ -25,7 +25,7 @@ export const About = (props) => {
           
           <div className="align-items-center mb-5 rowReverseAbout" data-aos="fade-left">{/*Tuve que sacar la clase row de bootstrap para poder invertir la fila*/}
             <div className="col-xs-12 col-md-6 order-md-2">
-              <img src="/img/seguridad.png" className="img-responsive" alt="Nosotros" />
+              <img src="/img/seguridad.png" className="img-responsive" alt="Equipo de seguridad utilizando walkie talkie para comunicación" />
             </div>
             <div className="col-xs-12 col-md-6 order-md-1">
               <div className="about-text">
@@ -75,7 +75,7 @@ export const About = (props) => {
   </div>
 </div>
 </div>
-      <img src="/img/SS anmac.png" alt="Anmac" className="anmacImg" />
+      <img src="/img/SS anmac.png" alt="Autorización del Ministerio de Seguridad de Buenos Aires y ANMaC" className="anmacImg" />
     </div>
   );
 };

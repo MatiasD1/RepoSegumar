@@ -8,20 +8,21 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const imagesDesktop = [
-  "img/SegumarD.png",
-  "img/Slide2Escritorio.png",
+  { src: "img/SegumarD.png", alt: "Banner principal de Segumar" },
+  { src: "img/Slide2Escritorio.png", alt: "Servicios de seguridad Segumar" },
 ];
 
 const imagesTablet = [
-  "img/SegumarI.jpg",
-  "img/Slide3Tablet.png",
-  {/*"img/Slide1Tablet.png",*/}
+  { src: "img/SegumarI.jpg", alt: "Promoción Segumar en tablet" },
+  { src: "img/Slide3Tablet.png", alt: "Alarma monitoreada versión tablet" },
+  // { src: "img/Slide1Tablet.png", alt: "Imagen descartada" },
 ];
 
 const imagesMobile = [
-  "img/Slide1Movil.png",
-  "img/PROMO50.png",
+  { src: "img/Slide1Movil.png", alt: "Banner Segumar móvil" },
+  { src: "img/PROMO50.png", alt: "Promo 50% Segumar" },
 ];
+
 
 const Carrusel = () => {
   
@@ -120,11 +121,12 @@ const Carrusel = () => {
           setActiveIndex(swiper.realIndex);
         }}
       >
-        {images.map((src, index) => (
+        {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={src} className="imgCarrusel" alt={`slide-${index}`} />
+            <img src={image.src} className="imgCarrusel" alt={image.alt} />
           </SwiperSlide>
         ))}
+
       </Swiper>
 
       <div

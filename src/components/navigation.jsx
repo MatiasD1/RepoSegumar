@@ -57,6 +57,14 @@ export const Navigation = () => {
               <li><a href="#testimonials" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("marcas"); }}>Nuestros Clientes</a></li>
               <li><a href="#contacto" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("contact"); }}>Contacto</a></li>
             </ul>
+            <div className="navbarSocialIcons">
+                <a href="https://www.facebook.com/segumar" target="_blank" rel="noopener noreferrer">
+                  <img src="/img/fb.png" alt="Icono de Facebook" className="redLogo" />
+                </a>
+                <a href="https://www.instagram.com/segumar_seguridad" target="_blank" rel="noopener noreferrer">
+                  <img src="/img/ig.png" alt="Icono de Instagram" className="redLogo" />
+                </a>
+              </div>
           </div>
         </div>
       </nav>

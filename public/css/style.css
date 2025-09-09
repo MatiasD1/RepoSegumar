@@ -132,10 +132,9 @@ hr {
 }
 #menu .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 0px !important;
   background-color: #ff0116;
   max-width: 95%;
   margin: 0 auto;
@@ -151,7 +150,6 @@ hr {
   display: flex;
   align-items: center;
 }
-
 
 #menu a.navbar-brand img {
   height: 44px; 
@@ -210,6 +208,40 @@ hr {
   list-style: none;
 }
 
+/* 🔹 Contenedor de iconos al borde derecho */
+#menu .navbarSocialIcons {
+  display: flex;
+  align-items: center;   /* centrado en el eje Y */
+  gap: 18px;             /* más separación entre íconos */
+  margin-left: 40px;     /* más distancia respecto a "Contacto" */
+}
+
+/* 🔹 Estilos de los links de iconos */
+#menu .navbarSocialIcons a {
+  display: flex;         /* asegura que la imagen quede centrada */
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+}
+
+/* 🔹 Estilos de las imágenes */
+#menu .navbarSocialIcons .redLogo {
+  width: 26px;
+  height: auto;
+  display: block;        /* evita saltos verticales raros */
+  margin-bottom: 0;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* blancos sobre rojo */
+}
+
+/* 🔹 Hover: solo zoom, sin línea */
+#menu .navbarSocialIcons img.redLogo:hover {
+  transform: scale(1.2);
+}
+
+
+/* ✅ Solo aplica el menú hamburguesa en móviles */
 /* ✅ Solo aplica el menú hamburguesa en móviles */
 @media (max-width: 765px) {
   #menu {
@@ -245,7 +277,7 @@ hr {
     padding: 10px 0;
   }
 
-  /* Cuando está abierto (agregás clase "show" con JS/React) */
+  /* Cuando está abierto (clase "show") */
   #menu .navbar-collapse.show {
     display: flex !important;
   }
@@ -254,7 +286,26 @@ hr {
     flex-direction: column;
     align-items: flex-end;
   }
+
+  /* 🔹 Ajuste de iconos sociales en menú hamburguesa */
+  #menu .navbarSocialIcons {
+    display: flex;
+    justify-content: flex-end;   /* los alinea al texto */
+    align-items: center;
+    gap: 18px;
+  }
+
+  #menu .navbarSocialIcons a {
+    display: flex;
+    align-items: center;
+  }
+
+  #menu .navbarSocialIcons img.redLogo {
+    width: 28px; /* un poco más grandes en móviles */
+    height: auto;
+  }
 }
+
 
 /* ✅ En tablets (768px a 991px), mostrar menú normal */
 @media (min-width: 766px) and (max-width: 991px) {
