@@ -3,17 +3,19 @@ import React from "react";
 export const HogarSeguroApp = (props) => {
   return (
     <>
-           <div className="encabezadoContainer" id="alarmaMonitoreada">
+         
+    
+        <div className="AppContainer" id="AppHogarSeguro">
+
+            <div className="encabezadoContainer" id="alarmaMonitoreada">
           <h1 className="AppHogarSeguroTitulo" >VIDEOVIGILANCIA<br/>INTELIGENTE</h1>
           <img src="/img/AlarmaMonitoreada2.png" className="TituloS" alt="Vigilante monitoreando a traves de camaras de seguridad"/>
         </div>
-    
-        <div className="AppContainer" id="AppHogarSeguro">
           <div className="AppTexto" data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-                      data-aos-duration="500"
-      data-aos-delay="400"
-      data-aos-offset="0">
+              data-aos-easing="ease-in-back"
+              data-aos-duration="500"
+              data-aos-delay="400"
+              data-aos-offset="0">
             <h3 className="AppTitulo">Sistema de vigilancia para tu empresa o consorcio</h3>
             {/*<p className="textoApp"></p>*/}
             <ul className="punteoApp">

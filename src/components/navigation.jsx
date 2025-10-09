@@ -1,17 +1,24 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false); // Estado menú hamburguesa
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false); // estado menú hamburguesa
 
   const handleScrollTo = (id) => {
-    navigate("/");
+    // Espera 50ms para asegurar que el elemento exista en la página
     setTimeout(() => {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-    setIsOpen(false); // Cerrar menú al navegar
+    }, 50);
+
+    setIsOpen(false); // cierra menú en móvil
+  };
+
+  const goToAlarma = () => {
+    navigate("/alarma-monitoreada");
+    setIsOpen(false);
   };
 
   return (
@@ -23,7 +30,7 @@ export const Navigation = () => {
             <button
               type="button"
               className="navbar-toggle collapsed"
-              onClick={() => setIsOpen(!isOpen)}  // toggle menu
+              onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
               aria-label="Toggle navigation"
             >
@@ -32,11 +39,13 @@ export const Navigation = () => {
               <span className="icon-bar"></span> 
               <span className="icon-bar"></span> 
             </button>
+
             <a
               className="navbar-brand page-scroll"
               href="#page-top"
               onClick={(e) => {
                 e.preventDefault();
+                if (location.pathname !== "/") navigate("/");
                 handleScrollTo("page-top");
               }}
             >
@@ -44,33 +53,97 @@ export const Navigation = () => {
             </a>
           </div>
 
-          {/* Agregar clase "show" cuando isOpen es true */}
-          <div
-            className={`collapse navbar-collapse${isOpen ? " show" : ""}`}
-            id="bs-example-navbar-collapse-1"
-          >
+          <div className={`collapse navbar-collapse${isOpen ? " show" : ""}`}>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#features" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("about"); }}>Quienes somos</a></li>
-              <li><a href="#about" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("seguridadFisica"); }}>Seguridad Física</a></li>
-              <li><a href="#services" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("alarmaMonitoreada"); }}>Alarma Monitoreada</a></li>
-              <li><a href="#portfolio" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("AppHogarSeguro"); }}>App Hogar Seguro</a></li>
-              <li><a href="#testimonials" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("marcas"); }}>Nuestros Clientes</a></li>
-              <li><a href="#contacto" className="page-scroll" onClick={(e) => { e.preventDefault(); handleScrollTo("contact"); }}>Contacto</a></li>
+              <li>
+                <a
+                  href="#about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (location.pathname !== "/") navigate("/");
+                    handleScrollTo("about");
+                  }}
+                >
+                  Quienes somos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#seguridadFisica"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (location.pathname !== "/") navigate("/");
+                    handleScrollTo("seguridadFisica");
+                  }}
+                >
+                  Seguridad Física
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#HogarSeguroApp"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (location.pathname !== "/") navigate("/");
+                    handleScrollTo("AppHogarSeguro");
+                  }}
+                >
+                  Videovigilancia Inteligente
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#marcas"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (location.pathname !== "/") navigate("/");
+                    handleScrollTo("marcas");
+                  }}
+                >
+                  Nuestros Clientes
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/alarma-monitoreada"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    goToAlarma();
+                  }}
+                >
+                  Alarma Monitoreada
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollTo("contact");
+                  }}
+                >
+                  Contacto
+                </a>
+              </li>
             </ul>
+
             <div className="navbarSocialIcons">
-                <a href="https://www.facebook.com/segumar" target="_blank" rel="noopener noreferrer">
-                  <img src="/img/fb.png" alt="Icono de Facebook" className="redLogo" />
-                </a>
-                <a href="https://www.instagram.com/segumar_seguridad" target="_blank" rel="noopener noreferrer">
-                  <img src="/img/ig.png" alt="Icono de Instagram" className="redLogo" />
-                </a>
-              </div>
+              <a href="https://www.facebook.com/segumar" target="_blank" rel="noopener noreferrer">
+                <img src="/img/fb.png" alt="Icono de Facebook" className="redLogo" />
+              </a>
+              <a href="https://www.instagram.com/segumar_seguridad" target="_blank" rel="noopener noreferrer">
+                <img src="/img/ig.png" alt="Icono de Instagram" className="redLogo" />
+              </a>
+            </div>
           </div>
         </div>
       </nav>
+
       <div className="whatsapp-bar">
         <p className="whatsapp-bar-cotizar"><strong>COTIZAR</strong></p>
-        <a href="https://wa.me/542236852201" target="_blank" rel="noopener noreferrer" className="whatsapp-button2">📞 2236 85-2201</a>
+        <a href="https://wa.me/542236852201" target="_blank" rel="noopener noreferrer" className="whatsapp-button2">
+          📞 2236 85-2201
+        </a>
       </div>
     </>
   );

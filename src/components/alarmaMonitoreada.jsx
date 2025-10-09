@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Contact } from "./contact";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const AlarmaMonitoreada = (props) => {
+
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    // Inicializa AOS una sola vez y muestra el contenido cuando ya esté listo
+    AOS.init({ once: true });
+    const id = requestAnimationFrame(() => setReady(true)); // espera 1 frame para asegurar que AOS haya aplicado estilos
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  if (!ready) return null; // evita mostrar nada hasta que AOS esté listo
+  
   return (
     <div>
       <div className="encabezadoContainer" id="alarmaMonitoreada">
@@ -61,7 +76,9 @@ export const AlarmaMonitoreada = (props) => {
           >
             COTIZAR
           </button>
-
+          <div id="contact">
+            <Contact data={props.contactData} />
+          </div>
 
         </div>
     </div>
