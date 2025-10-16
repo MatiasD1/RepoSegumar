@@ -18,6 +18,7 @@ import { AlarmaMonitoreada } from "./components/alarmaMonitoreada";
 
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
+import { Footer } from "./components/footer";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -87,8 +88,8 @@ const LandingWrapper = ({ landingPageData }) => {
       <About data={landingPageData.About} />
       <SeguridadFisica />
       <HogarSeguroApp />
+      <AlarmaMonitoreada />
       <Marcas />
-      <Contact data={landingPageData.Contact} id="contact" />
     </>
   );
 };
@@ -135,11 +136,13 @@ const App = () => {
             <Route path="/" element={<LandingWrapper landingPageData={landingPageData} />} />
             <Route
               path="/alarma-monitoreada"
-              element={<AlarmaMonitoreada contactData={landingPageData.Contact} />}
+              element={<AlarmaMonitoreada/>}
             />
           </Routes>
 
           <Wpp />
+          <Contact/>
+          <Footer/>
         </Router>
       )}
     </>

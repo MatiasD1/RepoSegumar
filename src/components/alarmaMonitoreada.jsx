@@ -76,9 +76,7 @@ export const AlarmaMonitoreada = (props) => {
           >
             COTIZAR
           </button>
-          <div id="contact">
-            <Contact data={props.contactData} />
-          </div>
+       
 
         </div>
     </div>
