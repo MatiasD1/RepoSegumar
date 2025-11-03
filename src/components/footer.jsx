@@ -8,7 +8,7 @@ export const Footer = () => {
           <ul>
             <li>
               <a
-                href="https://www.facebook.com/share/1P3fvzFNM7/?mibextid=wwXIfr"
+                href="https://www.facebook.com/segumarseguridad"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -21,7 +21,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/segumar_seguridad?igsh=YXd1bnNuMmhueHd4"
+                href="https://www.instagram.com/segumar_seguridad"
                 target="_blank"
                 rel="noopener noreferrer"
               >

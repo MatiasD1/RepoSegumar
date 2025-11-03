@@ -128,7 +128,7 @@ export const Navigation = () => {
             </ul>
 
             <div className="navbarSocialIcons">
-              <a href="https://www.facebook.com/segumar" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/segumarseguridad" target="_blank" rel="noopener noreferrer">
                 <img src="/img/fb.png" alt="Icono de Facebook" className="redLogo" />
               </a>
               <a href="https://www.instagram.com/segumar_seguridad" target="_blank" rel="noopener noreferrer">
@@ -141,8 +141,13 @@ export const Navigation = () => {
 
       <div className="whatsapp-bar">
         <p className="whatsapp-bar-cotizar"><strong>COTIZAR</strong></p>
-        <a href="https://wa.me/542236852201" target="_blank" rel="noopener noreferrer" className="whatsapp-button2">
-          📞 2236 85-2201
+        <a
+          href="https://wa.me/542236852201"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-button2"
+        >
+          <i className="fab fa-whatsapp"></i> 2236 85-2201
         </a>
       </div>
     </>

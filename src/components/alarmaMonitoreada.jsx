@@ -79,6 +79,9 @@ export const AlarmaMonitoreada = (props) => {
        
 
         </div>
+        <div id="about">
+            <img src="/img/SS anmac.png" alt="Autorización del Ministerio de Seguridad de Buenos Aires y ANMaC" className="anmacImg" />
+       </div>
     </div>
   );
 };

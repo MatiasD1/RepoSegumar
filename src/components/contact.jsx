@@ -45,6 +45,8 @@ export const Contact = (props) => {
       }
     );
   };
+  console.log("Contact props:", props.data);
+
   return (
     <div>
       <div id="contact">
