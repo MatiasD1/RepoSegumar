@@ -20,6 +20,10 @@ export const Navigation = () => {
     navigate("/alarma-monitoreada");
     setIsOpen(false);
   };
+    const goToTrabajaConNosotros = () => {
+    navigate("/trabajaConNosotros");
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -114,6 +118,22 @@ export const Navigation = () => {
                   Alarma Monitoreada
                 </a>
               </li>
+              <li>
+                <a
+                  href="/servicio-mayorista"
+                  rel="noopener noreferrer"
+                >
+                  Servicio Mayorista
+                </a>
+              </li>
+            {/*  <li>
+                <a
+                  href="/postulacion"
+                  rel="noopener noreferrer"
+                >
+                  Trabaja con nosotros
+                </a>
+              </li> */}
               <li>
                 <a
                   href="#contact"

@@ -136,7 +136,7 @@ hr {
   align-items: center;
   padding-right: 0px !important;
   background-color: #ff0116;
-  max-width: 95%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -203,8 +203,8 @@ hr {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: auto;
-  padding-left: 0;
+  margin: auto;
+  padding-left: 20px;
   list-style: none;
 }
 
@@ -1789,7 +1789,84 @@ header .intro-text {
   }
 
 }
+/* Trabaja Con Nosotros */
 
+.trabajaConNosotros {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+
+.trabajaContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.trabajaConNosotros h2 {
+  margin-bottom: 20px;
+}
+
+.trabajaConNosotros p {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.trabajaBoton {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #ff0116;
+  color: #fff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trabajaBoton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Postulacion */
+.postulacion-wrapper {
+  padding: 150px 0;
+}
+
+.postulacion-container {
+  max-width: 700px;
+  margin: 0 auto;
+  min-width: 20px;
+}
+
+.postulacion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+.postulacion-form button{
+  max-width: 300px;
+  align-self: center;
+}
+.form-row {
+  display: flex; 
+  gap: 20px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
 /* Contact Section */
 #contact {
   padding: 9rem 0 2rem;

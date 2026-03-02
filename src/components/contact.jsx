@@ -1,15 +1,15 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import React from "react";
 
 const initialState = {
   name: "",
   email: "",
+  phone: "",
   message: "",
 };
 export const Contact = (props) => {
   
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ name, email, phone, message }, setState] = useState(initialState);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -84,6 +84,17 @@ export const Contact = (props) => {
                     />
                   </div>
                 </div>
+                <div className="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="form-control"
+                  placeholder="Teléfono"
+                  required
+                  onChange={handleChange}
+                />
+              </div>
                 <div className="form-group">
                   <textarea
                     name="message"

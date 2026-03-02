@@ -10,6 +10,9 @@ import { Navigation } from "./components/navigation";
 import Carrusel from "./components/Carrusel";
 import { About } from "./components/about";
 import { Marcas } from "./components/marcas";
+import { ServicioMayorista } from "./components/servicioMayorista";
+import { TrabajaConNosotros } from "./components/trabajaConNosotros";
+import { Postulacion } from "./components/postulacion";
 import { Contact } from "./components/contact";
 import { Wpp } from "./components/wpp";
 import { SeguridadFisica } from "./components/seguridadFisica";
@@ -91,6 +94,7 @@ const LandingWrapper = ({ landingPageData }) => {
       <HogarSeguroApp />
       <AlarmaMonitoreada />
       <Marcas />
+
     </>
   );
 };
@@ -134,20 +138,31 @@ const App = () => {
           <Navigation />
 
           <Routes>
-            <Route path="/" element={<LandingWrapper landingPageData={landingPageData} />} />
             <Route
-              path="/alarma-monitoreada"
+              path="/"
               element={
-                <>       
-                <PromoBanner />           
-                <AlarmaMonitoreada />
-  
+                <>
+                  <LandingWrapper landingPageData={landingPageData} />
+      
+                  <Contact data={landingPageData.Contact} />
                 </>
               }
             />
+
+            <Route
+              path="/alarma-monitoreada"
+              element={
+                <>
+                  <PromoBanner />
+                  <AlarmaMonitoreada />
+                  <Contact data={landingPageData.Contact} />
+                </>
+              }
+            />
+            <Route path="/postulacion" element={<Postulacion />} />
+            <Route path="/servicio-mayorista" element={<ServicioMayorista />} />
           </Routes>
           <Wpp />
-          <Contact data={landingPageData.Contact} />
           <Footer/>
         </Router>
       )}
