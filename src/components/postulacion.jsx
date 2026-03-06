@@ -1,6 +1,4 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
-import React from "react";
 
 const initialState = {
   name: "",
@@ -22,40 +20,47 @@ export const Postulacion = () => {
 
   const clearState = () => setState(initialState);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_pfegfbb",
-        "template_xqjuas7", // ideal crear uno nuevo para RRHH
-        e.target,
-        "eT_lyfkkg2ZsiG33P"
-      )
-      .then(
-        () => {
-          setSuccessMessage("Postulación enviada con éxito.");
-          setErrorMessage("");
-          e.target.reset();
-          clearState();
-        },
-        () => {
-          setErrorMessage("Error al enviar. Inténtalo nuevamente.");
-          setSuccessMessage("");
-        }
-      );
+    const formData = new FormData(e.target);
+
+    const response = await fetch("https://formspree.io/f/xkoqnzdd", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setSuccessMessage("Postulación enviada con éxito.");
+      setErrorMessage("");
+      e.target.reset();
+      clearState();
+    } else {
+      setErrorMessage("Error al enviar. Inténtalo nuevamente.");
+      setSuccessMessage("");
+    }
   };
 
   return (
     <div className="postulacion-wrapper">
       <div className="postulacion-container">
 
-        <div className="section-title text-center">
-          <h2>Postulación</h2>
-          <p>Completá el formulario y adjuntá tu CV.</p>
+        <div className="">
+          <h2 className="postulacionTitulo">Postulación</h2>
+         {/* <p className="postulacionTexto">Completá el formulario y adjuntá tu CV.</p>*/}
         </div>
 
         <form onSubmit={handleSubmit} className="postulacion-form">
+
+          {/* asunto del email */}
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nueva Postulación - Segumar"
+          />
 
           <div className="form-row">
             <input
@@ -64,6 +69,7 @@ export const Postulacion = () => {
               placeholder="Nombre y Apellido"
               className="form-control"
               required
+              value={name}
               onChange={handleChange}
             />
 
@@ -73,6 +79,7 @@ export const Postulacion = () => {
               placeholder="Email"
               className="form-control"
               required
+              value={email}
               onChange={handleChange}
             />
           </div>
@@ -84,6 +91,7 @@ export const Postulacion = () => {
               placeholder="Teléfono"
               className="form-control"
               required
+              value={phone}
               onChange={handleChange}
             />
 
@@ -93,8 +101,10 @@ export const Postulacion = () => {
               placeholder="Área de interés"
               className="form-control"
               required
+              value={area}
               onChange={handleChange}
             />
+            <input type="text" name="_gotcha" style={{display:"none"}} />
           </div>
 
           <textarea
@@ -103,19 +113,22 @@ export const Postulacion = () => {
             placeholder="Contanos sobre tu experiencia"
             className="form-control"
             required
+            value={message}
             onChange={handleChange}
           ></textarea>
 
           <input
-            type="file"
-            name="cv"
+            type="url"
+            name="cv_link"
+            placeholder="Link a tu CV (Google Drive, Dropbox, etc.)"
             className="form-control"
-            accept=".pdf,.doc,.docx"
             required
           />
 
+         
+
           <button type="submit" className="btn btn-custom btn-lg">
-            Enviar Postulación
+            Enviar
           </button>
 
           {successMessage && <p className="success">{successMessage}</p>}

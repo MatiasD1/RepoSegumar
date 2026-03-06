@@ -47,7 +47,7 @@ export const AlarmaMonitoreada = (props) => {
             <p>Ante cualquier alerta, nuestro móvil acude al instante para protegerte y actuar rápido frente a cualquier emergencia.</p>
           </div>
 
-          <div className="AlarmaMonitoreadaCuadro glass large" data-aos="zoom-in">
+          <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
             <div className="icon-wrapper">
               <img src="/img/ahorrar.png" className="iconoServiciosAM" alt="Icono de signo peso"/>
             </div>

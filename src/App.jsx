@@ -94,6 +94,7 @@ const LandingWrapper = ({ landingPageData }) => {
       <HogarSeguroApp />
       <AlarmaMonitoreada />
       <Marcas />
+      <TrabajaConNosotros/>
 
     </>
   );
@@ -136,7 +137,7 @@ const App = () => {
         <Router basename="/">
           <ScrollToTop />
           <Navigation />
-
+          <div className="main-content">
           <Routes>
             <Route
               path="/"
@@ -162,6 +163,7 @@ const App = () => {
             <Route path="/postulacion" element={<Postulacion />} />
             <Route path="/servicio-mayorista" element={<ServicioMayorista />} />
           </Routes>
+          </div>
           <Wpp />
           <Footer/>
         </Router>

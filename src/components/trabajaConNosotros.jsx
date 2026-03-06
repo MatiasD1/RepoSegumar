@@ -9,7 +9,7 @@ export const TrabajaConNosotros = () => {
         </p>
 
         <a
-          href="/trabajaConNosotros"
+          href="/postulacion"
           rel="noopener noreferrer"
           className="trabajaBoton"
         >
