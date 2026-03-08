@@ -34,7 +34,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p>&copy; 2025 Design by B-Logic</p>
+        <p>&copy; 2025 Design by Matías Durand</p>
       </div>
     </footer>
   );

@@ -172,7 +172,7 @@ hr {
   font-family: "Gotham Pro", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 8px 2px 12px 2px;
   border-radius: 0;
@@ -1842,29 +1842,52 @@ header .intro-text {
 }
 
 /* Postulacion */
+/* Postulacion */
+
 .postulacion-wrapper {
-  padding: 150px 0;
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: url("/img/postulacionFondo.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px 20px;
 }
 
 .postulacion-container {
   max-width: 700px;
+  width: 100%;
   margin: 0 auto;
-  min-width: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px 30px;
+  border-radius: 8px;
 }
+
 .postulacionTitulo{
   font-size: 200%;
   text-align: center;
+  margin-bottom: 30px;
 }
+
 .postulacion-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 20px;
 }
+
 .postulacion-form button{
   max-width: 300px;
+  width: 100%;
   align-self: center;
 }
+
 .form-row {
   display: flex; 
   gap: 20px;
@@ -1872,16 +1895,76 @@ header .intro-text {
 
 .form-row input {
   flex: 1;
+  min-width: 0;
+}
+
+textarea.form-control,
+input.form-control {
+  width: 100%;
 }
 
 .success {
   color: green;
   margin-top: 10px;
+  text-align: center;
 }
 
 .error {
   color: red;
   margin-top: 10px;
+  text-align: center;
+}
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+  .postulacion-container {
+    max-width: 600px;
+    padding: 35px 25px;
+  }
+
+  .postulacionTitulo {
+    font-size: 180%;
+  }
+
+  .form-row {
+    gap: 15px;
+  }
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 767px) {
+
+  .postulacion-wrapper {
+    padding: 40px 15px;
+  }
+
+  .postulacion-container {
+    padding: 30px 20px;
+  }
+
+  .postulacionTitulo {
+    font-size: 160%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .postulacion-form button {
+    max-width: 100%;
+  }
+
 }
 /* Contact Section */
 #contact {
