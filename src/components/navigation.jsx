@@ -120,10 +120,10 @@ export const Navigation = () => {
               </li>
               <li>
                 <a
-                  href="/servicio-mayorista"
+                  href="/monitoreo-mayorista"
                   rel="noopener noreferrer"
                 >
-                  Servicio Mayorista
+                  Monitoreo Mayorista
                 </a>
               </li>
               <li>

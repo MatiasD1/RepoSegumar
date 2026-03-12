@@ -10,7 +10,7 @@ import { Navigation } from "./components/navigation";
 import Carrusel from "./components/Carrusel";
 import { About } from "./components/about";
 import { Marcas } from "./components/marcas";
-import { ServicioMayorista } from "./components/servicioMayorista";
+import { MonitoreoMayorista } from "./components/monitoreoMayorista";
 import { TrabajaConNosotros } from "./components/trabajaConNosotros";
 import { Postulacion } from "./components/postulacion";
 import { Contact } from "./components/contact";
@@ -18,7 +18,7 @@ import { Wpp } from "./components/wpp";
 import { SeguridadFisica } from "./components/seguridadFisica";
 import { HogarSeguroApp } from "./components/hogarSeguroApp";
 import { AlarmaMonitoreada } from "./components/alarmaMonitoreada";
-
+import { PoliticaPrivacidad } from "./components/pdp";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import { Footer } from "./components/footer";
@@ -154,14 +154,39 @@ const App = () => {
               path="/alarma-monitoreada"
               element={
                 <>
-                  <PromoBanner />
                   <AlarmaMonitoreada />
+                  <PromoBanner />
                   <Contact data={landingPageData.Contact} />
                 </>
               }
             />
-            <Route path="/postulacion" element={<Postulacion />} />
-            <Route path="/servicio-mayorista" element={<ServicioMayorista />} />
+            <Route
+              path="/monitoreo-mayorista"
+              element={
+                <>
+                  <MonitoreoMayorista />
+                  <Contact data={landingPageData.Contact} />
+                </>
+              }
+            />
+            <Route 
+              path="/postulacion" 
+              element={
+                <>  
+                <Postulacion />
+                <Contact data={landingPageData.Contact} />
+                </>
+              } 
+            />
+            <Route 
+              path="/politica-privacidad"
+              element={
+              <>
+              <PoliticaPrivacidad /> 
+              <Contact data={landingPageData.Contact} />
+              </>
+            }
+          />
           </Routes>
           </div>
           <Wpp />

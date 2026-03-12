@@ -209,7 +209,7 @@ const Carrusel = () => {
             onChange={(e) => setAceptaPolitica(e.target.checked)}
           />
           <label>
-            He leído y acepto la <a className='formCarruselPolitica' href="#">política de privacidad</a>.
+            He leído y acepto la <a className='formCarruselPolitica' href="/politica-privacidad" target="_blank">política de privacidad</a>.
           </label>
         </div>
 

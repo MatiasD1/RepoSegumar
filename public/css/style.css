@@ -1324,6 +1324,7 @@ header .intro-text {
   gap: 2rem;
   padding: 4rem 2rem;
   position: relative;
+  flex-wrap: wrap; /* CLAVE */
 }
 .AlarmaMonitoreadaTitulo{
     font-size: 2rem;
@@ -1341,11 +1342,12 @@ header .intro-text {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .AlarmaMonitoreadaCuadro:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 .AlarmaMonitoreadaCuadro.large {
@@ -1865,15 +1867,19 @@ header .intro-text {
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 40px 30px;
   border-radius: 8px;
 }
 
 .postulacionTitulo{
-  font-size: 200%;
+   font-size: 200%;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
+  display: block;
+  padding: 5px 20px;
+  border-radius: 8px;
+  width: fit-content;
 }
 
 .postulacion-form {
@@ -1896,11 +1902,13 @@ header .intro-text {
 .form-row input {
   flex: 1;
   min-width: 0;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 textarea.form-control,
 input.form-control {
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .success {
@@ -2207,4 +2215,26 @@ label {
         font-size: 3rem;
         text-align: center;
     }
+}
+/* Politica de Privacidad */
+.politicaContainer{
+  max-width: 800px;
+  margin: 140px auto 80px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.politicaContainer h2{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.politicaContainer p{
+  margin-bottom: 20px;
+}
+
+.ultimaActualizacion{
+  margin-top: 40px;
+  font-size: 1.2rem;
+  opacity: 0.7;
 }

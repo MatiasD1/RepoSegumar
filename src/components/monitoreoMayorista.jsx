@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export const AlarmaMonitoreada = () => {
-
+export const MonitoreoMayorista = () => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ export const AlarmaMonitoreada = () => {
   return (
     <div>
       <div className="encabezadoContainer" id="alarmaMonitoreada">
-        <h1 >Alarma Monitoreada</h1>
+        <h1 >Monitoreo Mayorista</h1>
         <img src="/img/casa.png" className="TituloS" alt="Casa moderna de noche" />
       </div>
       <div className="containerSF">
@@ -34,53 +33,35 @@ export const AlarmaMonitoreada = () => {
             <div className="icon-wrapper">
               <img src="/img/cam.png" className="iconoServiciosAM" alt="Icono de cámara de vigilancia"/>
             </div>
-            <h4 className="AlarmaMonitoreadaTitulo">VIVÍ PROTEGIDO LAS 24 HS</h4>
-            <p>Disfrutá de tu hogar con tranquilidad. Nuestro sistema monitoreado te cuida en todo momento, estés o no estés.</p>
+            <h4 className="AlarmaMonitoreadaTitulo">MONITOREO MAYORISTA 24 HS</h4>
+            <p>Ofrecé a tus clientes un servicio profesional sin invertir en una central propia.
+              Conectá tus alarmas a nuestra central y brindá monitoreo las 24 horas.
+            </p>
           </div>
 
           <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
             <div className="icon-wrapper">
               <img src="/img/van.png" className="iconoServiciosAM" alt="Icono de camioneta"/>
             </div>
-            <h4 className="AlarmaMonitoreadaTitulo">MÓVIL CON RESPUESTA INMEDIATA</h4>
-            <p>Ante cualquier alerta, nuestro móvil acude al instante para protegerte y actuar rápido frente a cualquier emergencia.</p>
+            <h4 className="AlarmaMonitoreadaTitulo">GESTIONÁ MÁS CLIENTES</h4>
+            <p>Nosotros nos encargamos del monitoreo y la respuesta ante alertas.
+              Vos podés enfocarte en instalar, vender y ampliar tu cartera de clientes.
+            </p>
           </div>
 
           <div className="AlarmaMonitoreadaCuadro glass" data-aos="zoom-in">
             <div className="icon-wrapper">
               <img src="/img/ahorrar.png" className="iconoServiciosAM" alt="Icono de signo peso"/>
             </div>
-            <h4 className="AlarmaMonitoreadaTitulo">AHORRÁ CON NUESTROS KITS EN COMODATO</h4>
-            <p>Protegé tu hogar sin gran inversión inicial. Sólo abonás la instalación y disfrutás de tranquilidad con sensores y comunicadores GPRS.</p>
+            <h4 className="AlarmaMonitoreadaTitulo">MONITOREO CON TU MARCA</h4>
+            <p>Atendemos las alarmas de tus clientes como si fuéramos tu empresa.
+              Nuestros operadores se comunican en nombre de tu marca para mantener tu identidad y la relación con tus clientes.
+            </p>
           </div>
         </div>
 
         
       </div>
-      <div className="cotizarBotonContainer">
-          <h4>Obtené tu presupuesto personalizado sin costo</h4>
-          <button
-          className="cotizarBoton"
-          onClick={() => {
-            const url = 'https://wa.me/542236852201';
-
-            // Llama a gtag sin pasarle la URL
-            if (typeof window !== "undefined" && window.gtag_report_conversion) {
-              window.gtag_report_conversion(); // No redirige si no le das un URL
-            }
-
-            // Abre WhatsApp en nueva pestaña
-            window.open(url, '_blank');
-            }}
-          >
-            COTIZAR
-          </button>
-       
-
-        </div>
-        <div id="about">
-            <img src="/img/SS anmac.png" alt="Autorización del Ministerio de Seguridad de Buenos Aires y ANMaC" className="anmacImg" />
-       </div>
     </div>
   );
 };
