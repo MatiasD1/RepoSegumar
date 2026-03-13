@@ -253,74 +253,6 @@ hr {
 #menu .navbarSocialIcons img.redLogo:hover {
   transform: scale(1.2);
 }
-
-
-/* ✅ Solo aplica el menú hamburguesa en móviles */
-/* ✅ Solo aplica el menú hamburguesa en móviles */
-@media (max-width: 765px) {
-  #menu {
-    padding: 5px !important;
-  }
-
-  #menu .navbar-header {
-    display: block;
-    width: 100%;
-  }
-
-  #menu a.navbar-brand img {
-    height: 44px;
-  }
-
-  #menu .container {
-    display: block !important;
-  }
-
-  /* Hamburguesa visible solo en móviles */
-  .navbar-toggle {
-    display: block !important;
-    float: right;
-    margin-top: 10px;
-  }
-
-  /* Oculta el menú por defecto en móviles */
-  #menu .navbar-collapse {
-    display: none !important;
-    flex-direction: column;
-    background-color: #ff0116;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  /* Cuando está abierto (clase "show") */
-  #menu .navbar-collapse.show {
-    display: flex !important;
-  }
-
-  #menu .navbar-nav {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  /* 🔹 Ajuste de iconos sociales en menú hamburguesa */
-  #menu .navbarSocialIcons {
-    display: flex;
-    justify-content: flex-end;   /* los alinea al texto */
-    align-items: center;
-    gap: 18px;
-  }
-
-  #menu .navbarSocialIcons a {
-    display: flex;
-    align-items: center;
-  }
-
-  #menu .navbarSocialIcons img.redLogo {
-    width: 28px; /* un poco más grandes en móviles */
-    height: auto;
-  }
-}
-
-
 /* ✅ En tablets (768px a 991px), mostrar menú normal */
 @media (min-width: 766px) and (max-width: 991px) {
 
@@ -362,6 +294,74 @@ hr {
 
   #menu .container {
     display: flex !important;
+  }
+}
+/* ✅ Solo aplica el menú hamburguesa en móviles */
+@media (max-width: 765px) {
+  #menu {
+    padding: 5px !important;
+  }
+
+  #menu .navbar-header {
+    display: block;
+    width: 100%;
+  }
+
+  #menu a.navbar-brand img {
+    height: 44px;
+  }
+
+  #menu .container {
+    display: block !important;
+  }
+
+  /* Hamburguesa visible solo en móviles */
+  .navbar-toggle {
+    display: block !important;
+    float: right;
+    margin-right: 10px;
+  }
+
+  /* Oculta el menú por defecto en móviles */
+  #menu .navbar-collapse {
+  display: none !important;
+  flex-direction: column;
+  background-color: #ff0116;
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid white; /* la línea */
+  }
+
+  /* Cuando está abierto (clase "show") */
+  #menu .navbar-collapse.show {
+    display: flex !important;
+    margin-bottom: 100px;
+    padding-top: 120px;
+  }
+
+  #menu .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  /* 🔹 Ajuste de iconos sociales en menú hamburguesa */
+  #menu .navbarSocialIcons {
+    display: flex;
+    justify-content: flex-end;   /* los alinea al texto */
+    align-items: center;
+    gap: 18px;
+    margin: 20px 20px 0px 0px;
+  }
+
+  #menu .navbarSocialIcons a {
+    display: flex;
+    align-items: center;
+  }
+
+  #menu .navbarSocialIcons img.redLogo {
+    width: 28px; /* un poco más grandes en móviles */
+    height: auto;
   }
 }
 
@@ -485,7 +485,7 @@ a:focus,
 
 .carruselContainer {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -514,8 +514,8 @@ a:focus,
   padding: 2vw 1.5vw;
   font-family: 'Gotham Pro', sans-serif;
   z-index: 1;
-  width: 28vw;
-  max-width: 90%;
+  width: 28%;
+  max-width: 400px;
   min-width: 250px;
   box-sizing: border-box;
   transition: opacity 0.3s ease;
@@ -2226,7 +2226,7 @@ label {
 
 .politicaContainer h2{
   text-align: center;
-  margin-bottom: 40px;
+  padding-top: 20px;
 }
 
 .politicaContainer p{
@@ -2237,4 +2237,14 @@ label {
   margin-top: 40px;
   font-size: 1.2rem;
   opacity: 0.7;
+}
+
+@media (max-width: 767px){
+  .politicaContainer h2{
+    padding-top: 0px;
+    margin-top: -30px;
+  }
+  .politicaContainer p{
+    margin: 20px;
+  }
 }

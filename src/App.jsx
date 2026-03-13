@@ -93,6 +93,7 @@ const LandingWrapper = ({ landingPageData }) => {
       <SeguridadFisica />
       <HogarSeguroApp />
       <AlarmaMonitoreada />
+      <MonitoreoMayorista />
       <Marcas />
       <TrabajaConNosotros/>
 

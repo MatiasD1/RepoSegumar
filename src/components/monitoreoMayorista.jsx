@@ -18,7 +18,7 @@ export const MonitoreoMayorista = () => {
     <div>
       <div className="encabezadoContainer" id="alarmaMonitoreada">
         <h1 >Monitoreo Mayorista</h1>
-        <img src="/img/casa.png" className="TituloS" alt="Casa moderna de noche" />
+        <img src="/img/monitoreoMayorista.png" className="TituloS" alt="Hombre monitoreando cámaras" />
       </div>
       <div className="containerSF">
       {/*  <div className="section-title">
