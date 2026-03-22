@@ -93,7 +93,6 @@ const LandingWrapper = ({ landingPageData }) => {
       <SeguridadFisica />
       <HogarSeguroApp />
       <AlarmaMonitoreada />
-      <MonitoreoMayorista />
       <Marcas />
       <TrabajaConNosotros/>
 
@@ -155,8 +154,8 @@ const App = () => {
               path="/alarma-monitoreada"
               element={
                 <>
-                  <AlarmaMonitoreada />
                   <PromoBanner />
+                  <AlarmaMonitoreada />
                   <Contact data={landingPageData.Contact} />
                 </>
               }

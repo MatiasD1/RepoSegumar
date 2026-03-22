@@ -62,6 +62,30 @@ export const MonitoreoMayorista = () => {
 
         
       </div>
+        <div className="cotizarBotonContainer">
+          <h4>Contactános para saber más del servicio de monitoreo</h4>
+          <button
+          className="cotizarBoton"
+          onClick={() => {
+            const url = 'https://wa.me/542236852201';
+
+            // Llama a gtag sin pasarle la URL
+            if (typeof window !== "undefined" && window.gtag_report_conversion) {
+              window.gtag_report_conversion(); // No redirige si no le das un URL
+            }
+
+            // Abre WhatsApp en nueva pestaña
+            window.open(url, '_blank');
+            }}
+          >
+            CONSULTAR
+          </button>
+       
+
+        </div>
+        <div id="about">
+            <img src="/img/SS anmac.png" alt="Autorización del Ministerio de Seguridad de Buenos Aires y ANMaC" className="anmacImg" />
+       </div>
     </div>
   );
 };
