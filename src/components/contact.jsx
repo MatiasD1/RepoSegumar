@@ -22,7 +22,7 @@ export const Contact = (props) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+    console.log(name, email, phone, message);
     
     // 1) Dispara el evento de conversión de Google Ads
     if (window.gtag_report_conversion) {
