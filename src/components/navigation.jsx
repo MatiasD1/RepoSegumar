@@ -40,7 +40,7 @@ export const Navigation = () => {
               <span className="icon-bar"></span> 
             </button>
 
-            <a
+            <a 
               className="navbar-brand page-scroll"
               href="#page-top"
               onClick={(e) => {
