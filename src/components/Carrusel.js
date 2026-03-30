@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 import emailjs from "emailjs-com";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -63,19 +63,17 @@ const Carrusel = () => {
     e.preventDefault();
 
     // Dispara el evento de conversión de Google Ads
-    <a
-      href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        if (window.gtag_report_conversion) {
-          window.gtag_report_conversion();
-        }
-        window.open("https://wa.me/2234554387", "_blank");
-      }}
-      className="promo-button"
-    >
-      Solicitar Promo
-    </a>
+  <button
+    onClick={() => {
+      if (window.gtag_report_conversion) {
+        window.gtag_report_conversion();
+      }
+      window.open("https://wa.me/2234554387", "_blank");
+    }}
+    className="promo-button"
+  >
+    Solicitar Promo
+  </button>
 
     if (!nombre || !telefono || !codigo || !aceptaPolitica) {
       setError('Por favor, completá todos los campos y aceptá la política.');
