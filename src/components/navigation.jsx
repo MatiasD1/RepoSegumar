@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
@@ -18,10 +18,6 @@ export const Navigation = () => {
 
   const goToAlarma = () => {
     navigate("/alarma-monitoreada");
-    setIsOpen(false);
-  };
-    const goToTrabajaConNosotros = () => {
-    navigate("/trabajaConNosotros");
     setIsOpen(false);
   };
 
