@@ -3,7 +3,7 @@ export const About = (props) => {
 
   if (!props.data) return null;
   return (
-    <div id="about">
+    <div id="about" className="aboutContainer">
       <img src="/img/Franjas.png" className="franjas" alt="" />
       <div className="container">
         <h2>¿Quiénes Somos?</h2>

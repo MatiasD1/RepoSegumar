@@ -2,7 +2,7 @@ import React from "react";
 
 export const SeguridadFisica = (props) => {
   return (
-    <div>
+    <div className="seguridadFisicaContainer">
       <div className="encabezadoContainer" id="seguridadFisica">
         <h1 className="encabezadoSF">Seguridad Física</h1>
         <img src="/img/SeguridadFisica.png" className="TituloS" alt="Custodio comunicándose por auricular"/>

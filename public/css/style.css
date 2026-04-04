@@ -153,7 +153,10 @@ hr {
   max-width: 100%;
   margin: 0 auto;
 }
-
+.logoSegumar {
+  max-width: 100%;
+  height: auto;
+}
 .navbar-header {
   display: flex;
   align-items: center;
@@ -341,7 +344,7 @@ hr {
 
   #menu .navbar-nav {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     margin: 0;
   }
 
@@ -1099,6 +1102,7 @@ header .intro-text {
   flex-direction: column;
   justify-content: center !important;
   text-align: center !important;
+      overflow: hidden !important;
 }
 .franjas{
   margin: 0 !important; 
@@ -1435,7 +1439,7 @@ header .intro-text {
   font-family: "Swiss 721", sans-serif;
   color: #fafafa;
   text-transform: uppercase;
-   margin: 0;
+  margin: 0;
 }
 
 .tituloApp {
@@ -1561,6 +1565,7 @@ header .intro-text {
   .AppContainerReverse {
     border-top: 0px;
     border-bottom: 0px solid;
+    overflow: hidden !important;
   }
 
   .AppTitulo {
@@ -1624,8 +1629,8 @@ header .intro-text {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  padding: 50px 20px;
-  margin: 0px 4rem;
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
 }
 
 .seguridadFisicaCuadro {
@@ -1701,7 +1706,7 @@ header .intro-text {
     font-size: 2rem;
   }
   .seguridadFisicaContainer {
-    margin: 0px 15px;
+    margin: 0px;
   }
   .seguridadFisicaCuadro h4{
     width: 100%; /* También una por fila en móviles */
