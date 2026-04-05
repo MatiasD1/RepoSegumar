@@ -1,43 +1,59 @@
 import React, { useState, useEffect } from "react";
 
-const imagesDesktop = [
-  { src: "img/SegumarD.png", alt: "Banner principal de Segumar" },
-];
+const imagesDesktop = {
+  src: "img/SegumarD.png",
+  alt: "Banner principal de Segumar",
+};
 
-const imagesTablet = [
-  { src: "img/SegumarI.jpg", alt: "Promoción Segumar en tablet" },
-];
+const imagesTablet = {
+  src: "img/SegumarI.jpg",
+  alt: "Promoción Segumar en tablet",
+};
 
-const imagesMobile = [
-  { src: "img/PROMO501.png", alt: "Promo 50% Segumar" },
-];
+const imagesMobile = {
+  src: "img/PROMO501.png",
+  alt: "Promo 50% Segumar",
+};
 
 export const PromoBanner = () => {
-  const [image, setImage] = useState(imagesDesktop[0]);
+  const [image, setImage] = useState(imagesDesktop);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const updateImage = () => {
+    const getImageByWidth = () => {
       const width = window.innerWidth;
-      const height = window.innerHeight;
 
-      let selectedImage;
+      if (width <= 767) return imagesMobile;
+      if (width <= 1024) return imagesTablet;
+      return imagesDesktop;
+    };
 
-      if (width <= 767) {
-        selectedImage = imagesMobile[0];
-      } else if (width <= 1024) {
-        selectedImage = imagesTablet[0];
-      } else {
-        selectedImage = imagesDesktop[0];
-      }
+    const updateImage = () => {
+      const newImage = getImageByWidth();
 
-      setLoaded(false); // ocultar mientras carga
-      setImage(selectedImage);
+      setImage((prev) => {
+        // 🔥 evita re-render innecesario (clave para mobile)
+        if (prev.src === newImage.src) return prev;
+
+        setLoaded(false);
+        return newImage;
+      });
     };
 
     updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
+
+    // 🔥 debounce para evitar múltiples renders en mobile
+    let timeout;
+    const handleResize = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(updateImage, 150);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
