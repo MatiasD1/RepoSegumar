@@ -36,17 +36,9 @@ export const PromoBanner = () => {
     };
 
     updateImage();
-
-  let timeout;
-  const handleResize = () => {
-    clearTimeout(timeout);
-    timeout = setTimeout(updateImage, 200);
-  };
-
-  window.addEventListener("resize", handleResize);
-
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+    window.addEventListener("resize", updateImage);
+    return () => window.removeEventListener("resize", updateImage);
+  }, []);
 
   return (
     <div className="carruselContainer">
