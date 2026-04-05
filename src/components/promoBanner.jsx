@@ -23,12 +23,12 @@ export const PromoBanner = () => {
 
       let selectedImage;
 
-      if (width > height) {
-        selectedImage = imagesDesktop[0];
-      } else if (width <= 767) {
+      if (width <= 767) {
         selectedImage = imagesMobile[0];
-      } else {
+      } else if (width <= 1024) {
         selectedImage = imagesTablet[0];
+      } else {
+        selectedImage = imagesDesktop[0];
       }
 
       setLoaded(false); // ocultar mientras carga
@@ -36,9 +36,17 @@ export const PromoBanner = () => {
     };
 
     updateImage();
-    window.addEventListener("resize", updateImage);
-    return () => window.removeEventListener("resize", updateImage);
-  }, []);
+
+  let timeout;
+  const handleResize = () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(updateImage, 200);
+  };
+
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   return (
     <div className="carruselContainer">
